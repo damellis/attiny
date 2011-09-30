@@ -11,3 +11,17 @@ attiny85.build.mcu=attiny85
 attiny85.build.f_cpu=1000000L
 attiny85.build.core=arduino:arduino
 attiny85.build.variant=tiny8
+
+attiny44.name=ATtiny44
+attiny44.upload.maximum_size=4096
+attiny44.build.mcu=attiny44
+attiny44.build.f_cpu=1000000L
+attiny44.build.core=arduino:arduino
+attiny44.build.variant=tiny14
+
+attiny84.name=ATtiny84
+attiny84.upload.maximum_size=8192
+attiny84.build.mcu=attiny84
+attiny84.build.f_cpu=1000000L
+attiny84.build.core=arduino:arduino
+attiny84.build.variant=tiny14
