@@ -1,0 +1,41 @@
+attiny45usbtinyisp.name=ATtiny45 (w/ USB Tiny ISP)
+attiny45usbtinyisp.upload.using=arduino:usbtinyisp
+attiny45usbtinyisp.upload.maximum_size=4096
+attiny45usbtinyisp.build.mcu=attiny45
+attiny45usbtinyisp.build.f_cpu=1000000L
+attiny45usbtinyisp.build.core=attiny45_85
+
+attiny45arduinoisp.name=ATtiny45 (w/ Arduino as ISP)
+attiny45arduinoisp.upload.using=arduino:arduinoisp
+attiny45arduinoisp.upload.maximum_size=4096
+attiny45arduinoisp.build.mcu=attiny45
+attiny45arduinoisp.build.f_cpu=1000000L
+attiny45arduinoisp.build.core=attiny45_85
+
+attiny45avrisp.name=ATtiny45 (w/ AVRISP mkII)
+attiny45avrisp.upload.using=arduino:avrispmkii
+attiny45avrisp.upload.maximum_size=4096
+attiny45avrisp.build.mcu=attiny45
+attiny45avrisp.build.f_cpu=1000000L
+attiny45avrisp.build.core=attiny45_85
+
+attiny85usbtinyisp.name=ATtiny85 (w/ USB Tiny ISP)
+attiny85usbtinyisp.upload.using=arduino:usbtinyisp
+attiny85usbtinyisp.upload.maximum_size=8192
+attiny85usbtinyisp.build.mcu=attiny85
+attiny85usbtinyisp.build.f_cpu=1000000L
+attiny85usbtinyisp.build.core=attiny45_85
+
+attiny85arduinoisp.name=ATtiny85 (w/ Arduino as ISP)
+attiny85arduinoisp.upload.using=arduino:arduinoisp
+attiny85arduinoisp.upload.maximum_size=8192
+attiny85arduinoisp.build.mcu=attiny85
+attiny85arduinoisp.build.f_cpu=1000000L
+attiny85arduinoisp.build.core=attiny45_85
+
+attiny85avrisp.name=ATtiny85 (w/ AVRISP mkII)
+attiny85avrisp.upload.using=arduino:avrispmkii
+attiny85avrisp.upload.maximum_size=8192
+attiny85avrisp.build.mcu=attiny85
+attiny85avrisp.build.f_cpu=1000000L
+attiny85avrisp.build.core=attiny45_85
