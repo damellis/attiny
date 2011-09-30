@@ -25,9 +25,10 @@
   Modified 09-10-2009 for attiny45 A.Saporetti
 */
 
-#include <avr/io.h>
-#include "wiring_private.h"
-#include "pins_arduino.h"
+#ifndef Pins_Arduino_h
+#define Pins_Arduino_h
+
+#include <avr/pgmspace.h>
 
 // ATMEL ATTINY45 / ARDUINO
 //
@@ -35,33 +36,31 @@
 // Ain0 (D 5) PB5  1|    |8  Vcc
 // Ain3 (D 3) PB3  2|    |7  PB2 (D 2)  Ain1
 // Ain2 (D 4) PB4  3|    |6  PB1 (D 1) pwm1
-//      	  GND  4|    |5  PB0 (D 0) pwm0
+//            GND  4|    |5  PB0 (D 0) pwm0
 //                  +----+
 
 
-#define PB 1
-
-#define REPEAT8(x) x, x, x, x, x, x, x, x
-#define BV0TO7 _BV(0), _BV(1), _BV(2), _BV(3), _BV(4), _BV(5), _BV(6), _BV(7)
-#define BV7TO0 _BV(7), _BV(6), _BV(5), _BV(4), _BV(3), _BV(2), _BV(1), _BV(0)
-
+#ifdef ARDUINO_MAIN
 
 // these arrays map port names (e.g. port B) to the
 // appropriate addresses for various functions (e.g. reading
 // and writing) tiny45 only port B 
-const uint8_t PROGMEM port_to_mode_PGM[] = {
+const uint16_t PROGMEM port_to_mode_PGM[] = {
 	NOT_A_PORT,
-	&DDRB,
+	NOT_A_PORT,
+	(uint16_t) &DDRB,
 };
 
-const uint8_t PROGMEM port_to_output_PGM[] = {
+const uint16_t PROGMEM port_to_output_PGM[] = {
 	NOT_A_PORT,
-	&PORTB,
+	NOT_A_PORT,
+	(uint16_t) &PORTB,
 };
 
-const uint8_t PROGMEM port_to_input_PGM[] = {
+const uint16_t PROGMEM port_to_input_PGM[] = {
 	NOT_A_PIN,
-	&PINB,
+	NOT_A_PIN,
+	(uint16_t) &PINB,
 };
 
 const uint8_t PROGMEM digital_pin_to_port_PGM[] = {
@@ -86,9 +85,13 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	TIMER0A, /* OC0A */
-	TIMER1,
+	TIMER0B,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 };
+
+#endif
+
+#endif

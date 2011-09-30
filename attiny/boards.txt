@@ -1,0 +1,13 @@
+attiny45.name=ATtiny45
+attiny45.upload.maximum_size=4096
+attiny45.build.mcu=attiny45
+attiny45.build.f_cpu=1000000L
+attiny45.build.core=arduino:arduino
+attiny45.build.variant=tiny8
+
+attiny85.name=ATtiny85
+attiny85.upload.maximum_size=8192
+attiny85.build.mcu=attiny85
+attiny85.build.f_cpu=1000000L
+attiny85.build.core=arduino:arduino
+attiny85.build.variant=tiny8
