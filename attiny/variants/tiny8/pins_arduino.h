@@ -39,6 +39,10 @@
 //            GND  4|    |5  PB0 (D 0) pwm0
 //                  +----+
 
+#define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 4) ? (&GIMSK) : ((uint8_t *)0) )
+#define digitalPinToPCICRbit(p) ( PCIE )
+#define digitalPinToPCMSK(p)    ( ((p) <= 4) ? (&PCMSK) : ((uint8_t *)0) )
+#define digitalPinToPCMSKbit(p) ( (p) )
 
 #ifdef ARDUINO_MAIN
 
