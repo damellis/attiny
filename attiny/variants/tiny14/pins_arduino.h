@@ -42,6 +42,11 @@
 //  PWM        (D  4)  PA6  7|    |8   PA5  (D  5)        PWM
 //                           +----+
 
+#define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 10) ? (&GIMSK) : ((uint8_t *)0) )
+#define digitalPinToPCICRbit(p) ( ((p) <= 2) ? PCIE1 : PCIE0 )
+#define digitalPinToPCMSK(p)    ( ((p) <= 2) ? (&PCMSK1) : (((p) <= 10) ? (&PCMSK0) : ((uint8_t *)0)) )
+#define digitalPinToPCMSKbit(p) ( ((p) <= 2) ? (p) : (10 - (p)) )
+
 #ifdef ARDUINO_MAIN
 
 // these arrays map port names (e.g. port B) to the
