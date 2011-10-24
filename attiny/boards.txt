@@ -12,6 +12,16 @@ attiny85.build.f_cpu=1000000L
 attiny85.build.core=arduino:arduino
 attiny85.build.variant=tiny8
 
+attiny85-8.name=ATtiny85 (8 MHz)
+attiny85-8.bootloader.low_fuses=0xe2
+attiny85-8.bootloader.high_fuses=0xdf
+attiny85-8.bootloader.extended_fuses=0xff
+attiny85-8.upload.maximum_size=8192
+attiny85-8.build.mcu=attiny85
+attiny85-8.build.f_cpu=8000000L
+attiny85-8.build.core=arduino:arduino
+attiny85-8.build.variant=tiny8
+
 attiny44.name=ATtiny44
 attiny44.upload.maximum_size=4096
 attiny44.build.mcu=attiny44
@@ -25,3 +35,13 @@ attiny84.build.mcu=attiny84
 attiny84.build.f_cpu=1000000L
 attiny84.build.core=arduino:arduino
 attiny84.build.variant=tiny14
+
+attiny84-8.name=ATtiny84 (8 MHz)
+attiny84-8.bootloader.low_fuses=0xe2
+attiny84-8.bootloader.high_fuses=0xdf
+attiny84-8.bootloader.extended_fuses=0xff
+attiny84-8.upload.maximum_size=8192
+attiny84-8.build.mcu=attiny84
+attiny84-8.build.f_cpu=8000000L
+attiny84-8.build.core=arduino:arduino
+attiny84-8.build.variant=tiny14
