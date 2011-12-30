@@ -117,3 +117,13 @@ attiny84-20.build.mcu=attiny84
 attiny84-20.build.f_cpu=20000000L
 attiny84-20.build.core=arduino:arduino
 attiny84-20.build.variant=tiny14
+
+attiny13.name=ATtiny13 (internal 9.6 MHz clock)
+attiny13.bootloader.low_fuses=0x7a
+attiny13.bootloader.high_fuses=0xff
+attiny13.upload.maximum_size=1024
+attiny13.build.mcu=attiny13
+attiny13.build.f_cpu=9600000L
+attiny13.build.core=arduino:arduino
+attiny13.build.variant=tiny8
+
