@@ -1,4 +1,6 @@
 ==> Added support for ATtiny 13
+http://tekstop.wordpress.com/2011/12/30/programming-attiny13-using-arduino-isp-and-all-the-hacking-involved/
+
 *** modified boards.txt [ATtiny13 can be programmed using Arduino as ISP]
 *** NOTE: A change has to be made to the wiring.c file in the arduino core for this to work correctly. The wiring.c file has an error where it does not set the correct TIMER for ATTiny13 only. This change will not impact any other boards.
 
