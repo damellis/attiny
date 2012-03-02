@@ -1,3 +1,43 @@
+attiny25-i1.name=ATtiny25 (internal 1 MHz clock)
+attiny25-i1.bootloader.low_fuses=0x62
+attiny25-i1.bootloader.high_fuses=0xdf
+attiny25-i1.bootloader.extended_fuses=0xff
+attiny25-i1.upload.maximum_size=4096
+attiny25-i1.build.mcu=attiny25
+attiny25-i1.build.f_cpu=1000000L
+attiny25-i1.build.core=arduino:arduino
+attiny25-i1.build.variant=tiny8
+
+attiny25-i8.name=ATtiny25 (internal 8 MHz clock)
+attiny25-i8.bootloader.low_fuses=0xe2
+attiny25-i8.bootloader.high_fuses=0xdf
+attiny25-i8.bootloader.extended_fuses=0xff
+attiny25-i8.upload.maximum_size=4096
+attiny25-i8.build.mcu=attiny25
+attiny25-i8.build.f_cpu=8000000L
+attiny25-i8.build.core=arduino:arduino
+attiny25-i8.build.variant=tiny8
+
+attiny25-e8.name=ATtiny25 (external 8 MHz clock)
+attiny25-e8.bootloader.low_fuses=0xfd
+attiny25-e8.bootloader.high_fuses=0xdf
+attiny25-e8.bootloader.extended_fuses=0xff
+attiny25-e8.upload.maximum_size=4096
+attiny25-e8.build.mcu=attiny25
+attiny25-e8.build.f_cpu=8000000L
+attiny25-e8.build.core=arduino:arduino
+attiny25-e8.build.variant=tiny8
+
+attiny25-e20.name=ATtiny25 (external 20 MHz clock)
+attiny25-e20.bootloader.low_fuses=0xfe
+attiny25-e20.bootloader.high_fuses=0xdf
+attiny25-e20.bootloader.extended_fuses=0xff
+attiny25-e20.upload.maximum_size=4096
+attiny25-e20.build.mcu=attiny25
+attiny25-e20.build.f_cpu=20000000L
+attiny25-e20.build.core=arduino:arduino
+attiny25-e20.build.variant=tiny8
+
 attiny45-i1.name=ATtiny45 (internal 1 MHz clock)
 attiny45-i1.bootloader.low_fuses=0x62
 attiny45-i1.bootloader.high_fuses=0xdf
