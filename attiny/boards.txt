@@ -157,3 +157,33 @@ attiny84-e20.build.mcu=attiny84
 attiny84-e20.build.f_cpu=20000000L
 attiny84-e20.build.core=arduino:arduino
 attiny84-e20.build.variant=tiny14
+
+attiny2313-i1.name=ATtiny2313 (internal 1 MHz clock)
+attiny2313-i1.bootloader.low_fuses=0x62
+attiny2313-i1.bootloader.high_fuses=0xdf
+attiny2313-i1.bootloader.extended_fuses=0xff
+attiny2313-i1.upload.maximum_size=2048
+attiny2313-i1.build.mcu=attiny2313
+attiny2313-i1.build.f_cpu=1000000L
+attiny2313-i1.build.core=arduino:arduino
+attiny2313-i1.build.variant=tiny20
+
+attiny2313-i8.name=ATtiny2313 (internal 8 MHz clock)
+attiny2313-i8.bootloader.low_fuses=0xe2
+attiny2313-i8.bootloader.high_fuses=0xdf
+attiny2313-i8.bootloader.extended_fuses=0xff
+attiny2313-i8.upload.maximum_size=2048
+attiny2313-i8.build.mcu=attiny2313
+attiny2313-i8.build.f_cpu=8000000L
+attiny2313-i8.build.core=arduino:arduino
+attiny2313-i8.build.variant=tiny20
+
+attiny2313-e8.name=ATtiny2313 (external 8 MHz clock)
+attiny2313-e8.bootloader.low_fuses=0xfd
+attiny2313-e8.bootloader.high_fuses=0xdf
+attiny2313-e8.bootloader.extended_fuses=0xff
+attiny2313-e8.upload.maximum_size=2048
+attiny2313-e8.build.mcu=attiny2313
+attiny2313-e8.build.f_cpu=8000000L
+attiny2313-e8.build.core=arduino:arduino
+attiny2313-e8.build.variant=tiny20
