@@ -88,6 +88,16 @@ attiny85-i8.build.f_cpu=8000000L
 attiny85-i8.build.core=arduino:arduino
 attiny85-i8.build.variant=tiny8
 
+attiny85-e8.name=ATtiny85 (external 8 MHz clock)
+attiny85-e8.bootloader.low_fuses=0xfd
+attiny85-e8.bootloader.high_fuses=0xdf
+attiny85-e8.bootloader.extended_fuses=0xff
+attiny85-e8.upload.maximum_size=8192
+attiny85-e8.build.mcu=attiny85
+attiny85-e8.build.f_cpu=8000000L
+attiny85-e8.build.core=arduino:arduino
+attiny85-e8.build.variant=tiny8
+
 attiny85-e20.name=ATtiny85 (external 20 MHz clock)
 attiny85-e20.bootloader.low_fuses=0xfe
 attiny85-e20.bootloader.high_fuses=0xdf
