@@ -1,0 +1,26 @@
+Arduino for ATtiny
+==================
+By Sylvain Leroux <sylvain@chicoree.fr>
+Based on Arduino attiny support by David A. Mellis.
+
+This set of file add support for (some) ATtiny chip on
+the Arduino platform.
+
+Currently supported chips are:
+- ATtiny45 (original work by David A. Mellis)
+- ATtiny85 (original work by David A. Mellis)
+- ATtiny44 (original work by David A. Mellis)
+- ATtiny84 (original work by David A. Mellis)
+- ATtiny2313 (by Sylvain Leroux)
+
+Usage
+-----
+cd /path/to/my/sketchbook
+mkdir hardware
+cd hardware
+git clone http://github.com/s-leroux/attiny -b Arduino1
+
+Next time you launch the Arduino IDE, the supported chip will be added
+to the ''tools > board'' menu. Upload you sketch using the appropriate
+ISP programmer.
+
