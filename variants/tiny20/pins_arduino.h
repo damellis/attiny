@@ -42,6 +42,12 @@
 //                     GND 10|    |11  PD6  (D 17) 
 //                           +----+
 
+const static uint8_t MOSI = 5;
+const static uint8_t MISO = 6;
+const static uint8_t SCK  = 7;
+// the ATtiny2313 USI Three-wire mode does not have a SS (Slave Select) pin
+// const static uint8_t SS = ;
+
 const static uint8_t A0 = 0;
 const static uint8_t A1 = 1;
 const static uint8_t A2 = 2;
