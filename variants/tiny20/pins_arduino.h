@@ -70,6 +70,9 @@ const static uint8_t A7 = 7;
                                   PCIE2)
 
 // interrupt pin to mask
+// XXX This is plain old wrong
+// XXX interrupts are only on PORTB and PCMSK maps to that port's pins
+// XXX should check on original files !
 #define digitalPinToPCMSK(p)    ( ((p) <= 7) ? (&PCMSK0) : \
                                   ((p) <= 10) ? (&PCMSK1) : \
                                   ((p) <= 17) ? (&PCMSK2) : \
