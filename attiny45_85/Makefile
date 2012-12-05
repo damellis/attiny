@@ -7,12 +7,12 @@
 # Detailed instructions for using the makefile:
 #
 #  1. Copy this file into the folder with your sketch. There should be a
-#     file with the same name as the folder and with the extension .pde
-#     (e.g. foo.pde in the foo/ folder).
+#     file with the same name as the folder and with the extension .ino
+#     (e.g. foo.ino  in the foo/ folder).
 #
 #  2. Modify the line containg "INSTALL_DIR" to point to the directory that
 #     contains the Arduino installation (for example, under Mac OS X, this
-#     might be /Applications/arduino-0012).
+#     might be /Applications/Arduino.app/Contents/Resources/Java/
 #
 #  3. Modify the line containing "PORT" to refer to the filename
 #     representing the USB or serial connection to your Arduino board
@@ -35,7 +35,7 @@
 # $Id$
 
 TARGET = $(notdir $(CURDIR))
-INSTALL_DIR = ../../..
+INSTALL_DIR = /Users/extracbd/Desktop/workspace-fullservice/Arduino/build/macosx/work/Arduino.app/Contents/Resources/Java
 PORT = /dev/tty.usb*
 UPLOAD_RATE = 19200
 AVRDUDE_PROGRAMMER = stk500v1
@@ -43,12 +43,13 @@ MCU = attiny84
 F_CPU = 8000000
 
 VARIANT = tiny8
+
 ############################################################################
 # Below here nothing should be changed...
 
 ARDUINO = $(INSTALL_DIR)/hardware/arduino/attiny45_85/cores/attiny45_85
 AVR_TOOLS_PATH = $(INSTALL_DIR)/hardware/tools/avr/bin
-SRC =  $(ARDUINO)/../variants/$(VARIANT)/pins_arduino.c $(ARDUINO)/wiring.c \
+SRC =  $(ARDUINO)/../../variants/$(VARIANT)/pins_arduino.h $(ARDUINO)/wiring.c \
 $(ARDUINO)/wiring_analog.c $(ARDUINO)/wiring_digital.c \
 $(ARDUINO)/wiring_pulse.c $(ARDUINO)/wiring_serial.c \
 $(ARDUINO)/wiring_shift.c $(ARDUINO)/WInterrupts.c
@@ -128,7 +129,7 @@ all: applet_files build sizeafter
 
 build: elf hex 
 
-applet_files: $(TARGET).pde
+applet_files: $(TARGET).ino
 	# Here is the "preprocessing".
 	# It creates a .cpp file based with the same name as the .pde file.
 	# On top of the new .cpp file comes the WProgram.h header.
