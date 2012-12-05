@@ -42,17 +42,17 @@ AVRDUDE_PROGRAMMER = stk500v1
 MCU = attiny84
 F_CPU = 8000000
 
+VARIANT = tiny8
 ############################################################################
 # Below here nothing should be changed...
 
-ARDUINO = $(INSTALL_DIR)/hardware/cores/arduino
+ARDUINO = $(INSTALL_DIR)/hardware/arduino/attiny45_85/cores/attiny45_85
 AVR_TOOLS_PATH = $(INSTALL_DIR)/hardware/tools/avr/bin
-SRC =  $(ARDUINO)/pins_arduino.c $(ARDUINO)/wiring.c \
+SRC =  $(ARDUINO)/../variants/$(VARIANT)/pins_arduino.c $(ARDUINO)/wiring.c \
 $(ARDUINO)/wiring_analog.c $(ARDUINO)/wiring_digital.c \
 $(ARDUINO)/wiring_pulse.c $(ARDUINO)/wiring_serial.c \
 $(ARDUINO)/wiring_shift.c $(ARDUINO)/WInterrupts.c
-CXXSRC = $(ARDUINO)/HardwareSerial.cpp $(ARDUINO)/WMath.cpp \
-$(ARDUINO)/Print.cpp
+CXXSRC = $(ARDUINO)/WMath.cpp $(ARDUINO)/Print.cpp
 FORMAT = ihex
 
 
