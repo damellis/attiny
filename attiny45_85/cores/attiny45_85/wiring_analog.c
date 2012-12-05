@@ -22,6 +22,9 @@
   Modified 28 September 2010 by Mark Sproul
 
   $Id: wiring.c 248 2007-02-03 15:36:30Z mellis $
+  
+  Modified 28-08-2009 for attiny84 R.Wiersma
+  Modified 14-108-2009 for attiny45 Saposoft
 */
 
 #include "wiring_private.h"

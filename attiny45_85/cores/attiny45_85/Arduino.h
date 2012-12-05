@@ -47,15 +47,6 @@ void yield(void);
 #define DEFAULT 0
 #define EXTERNAL 1
 #define INTERNAL 2
-#else  
-#if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__) || defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega644P__)
-#define INTERNAL1V1 2
-#define INTERNAL2V56 3
-#else
-#define INTERNAL 3
-#endif
-#define DEFAULT 1
-#define EXTERNAL 0
 #endif
 
 // undefine stdlib's abs if encountered
@@ -168,6 +159,7 @@ extern const uint8_t PROGMEM digital_pin_to_timer_PGM[];
 #define NOT_ON_TIMER 0
 #define TIMER0A 1
 #define TIMER0B 2
+#define TIMER1 3
 #define TIMER1A 3
 #define TIMER1B 4
 #define TIMER2  5
@@ -192,8 +184,6 @@ extern const uint8_t PROGMEM digital_pin_to_timer_PGM[];
 #ifdef __cplusplus
 #include "WCharacter.h"
 #include "WString.h"
-#include "HardwareSerial.h"
-
 uint16_t makeWord(uint16_t w);
 uint16_t makeWord(byte h, byte l);
 

@@ -25,6 +25,7 @@
   Modified 14-108-2009 for attiny45 Saposoft
 */
 
+#define ARDUINO_MAIN
 #include "wiring_private.h"
 #include "pins_arduino.h"
 

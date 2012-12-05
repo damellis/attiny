@@ -21,6 +21,7 @@
   Boston, MA  02111-1307  USA
   
   Modified 24 November 2006 by David A. Mellis
+  Modified 1 August 2010 by Mark Sproul
 
   Modified 28-08-2009 for attiny84 R.Wiersma
   Modified 09-10-2009 for attiny45 A.Saporetti
@@ -32,10 +33,9 @@
 #include <avr/pgmspace.h>
 #include <stdio.h>
 
-#include "WConstants.h"
 #include "wiring_private.h"
 
-volatile static voidFuncPtr intFunc[EXTERNAL_NUM_INTERRUPTS];
+static volatile voidFuncPtr intFunc[EXTERNAL_NUM_INTERRUPTS];
 // volatile static voidFuncPtr twiIntFunc;
 
 #define EICRA MCUCR
