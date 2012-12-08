@@ -9,7 +9,7 @@ attiny45.upload.protocol=arduino
 attiny45.upload.speed=19200
 attiny45.build.mcu=attiny45
 attiny45.build.f_cpu=1000000L
-attiny45.build.core=attiny45_85
+attiny45.build.core=attiny
 attiny45.build.variant=tiny8
 
 attiny45-8.name=ATtiny45 (internal 8 MHz clock)
@@ -23,7 +23,7 @@ attiny45-8.upload.protocol=arduino
 attiny45-8.upload.speed=19200
 attiny45-8.build.mcu=attiny45
 attiny45-8.build.f_cpu=8000000L
-attiny45-8.build.core=attiny45_85
+attiny45-8.build.core=attiny
 attiny45-8.build.variant=tiny8
 
 attiny45-20.name=ATtiny45 (external 20 MHz clock)
@@ -37,7 +37,7 @@ attiny45-20.upload.protocol=arduino
 attiny45-20.upload.speed=19200
 attiny45-20.build.mcu=attiny45
 attiny45-20.build.f_cpu=20000000L
-attiny45-20.build.core=attiny45_85
+attiny45-20.build.core=attiny
 attiny45-20.build.variant=tiny8
 
 attiny85.name=ATtiny85 (internal 1 MHz clock)
@@ -51,7 +51,7 @@ attiny85.upload.protocol=arduino
 attiny85.upload.speed=19200
 attiny85.build.mcu=attiny85
 attiny85.build.f_cpu=1000000L
-attiny85.build.core=attiny45_85
+attiny85.build.core=attiny
 attiny85.build.variant=tiny8
 
 attiny85-8.name=ATtiny85 (internal 8 MHz clock)
@@ -65,7 +65,7 @@ attiny85-8.upload.protocol=arduino
 attiny85-8.upload.speed=19200
 attiny85-8.build.mcu=attiny85
 attiny85-8.build.f_cpu=8000000L
-attiny85-8.build.core=attiny45_85
+attiny85-8.build.core=attiny
 attiny85-8.build.variant=tiny8
 
 attiny85-e8.name=ATtiny85 (external 8 MHz clock)
@@ -79,7 +79,7 @@ attiny85-e8.upload.protocol=arduino
 attiny85-e8.upload.speed=19200
 attiny85-e8.build.mcu=attiny85
 attiny85-e8.build.f_cpu=8000000L
-attiny85-e8.build.core=arduino:arduino
+attiny85-e8.build.core=attiny
 attiny85-e8.build.variant=tiny8
 
 attiny85-20.name=ATtiny85 (external 20 MHz clock)
@@ -93,7 +93,7 @@ attiny85-20.upload.protocol=arduino
 attiny85-20.upload.speed=19200
 attiny85-20.build.mcu=attiny85
 attiny85-20.build.f_cpu=20000000L
-attiny85-20.build.core=attiny45_85
+attiny85-20.build.core=attiny
 attiny85-20.build.variant=tiny8
 
 attiny44.name=ATtiny44 (internal 1 MHz clock)
@@ -107,7 +107,7 @@ attiny44.upload.protocol=arduino
 attiny44.upload.speed=19200
 attiny44.build.mcu=attiny44
 attiny44.build.f_cpu=1000000L
-attiny44.build.core=attiny45_85
+attiny44.build.core=attiny
 attiny44.build.variant=tiny14
 
 attiny44-8.name=ATtiny44 (internal 8 MHz clock)
@@ -121,7 +121,7 @@ attiny44-8.upload.protocol=arduino
 attiny44-8.upload.speed=19200
 attiny44-8.build.mcu=attiny44
 attiny44-8.build.f_cpu=8000000L
-attiny44-8.build.core=attiny45_85
+attiny44-8.build.core=attiny
 attiny44-8.build.variant=tiny14
 
 attiny44-20.name=ATtiny44 (external 20 MHz clock)
@@ -135,7 +135,7 @@ attiny44-20.upload.protocol=arduino
 attiny44-20.upload.speed=19200
 attiny44-20.build.mcu=attiny44
 attiny44-20.build.f_cpu=20000000L
-attiny44-20.build.core=attiny45_85
+attiny44-20.build.core=attiny
 attiny44-20.build.variant=tiny14
 
 attiny84.name=ATtiny84 (internal 1 MHz clock)
@@ -149,7 +149,7 @@ attiny84.upload.protocol=arduino
 attiny84.upload.speed=19200
 attiny84.build.mcu=attiny84
 attiny84.build.f_cpu=1000000L
-attiny84.build.core=attiny45_85
+attiny84.build.core=attiny
 attiny84.build.variant=tiny14
 
 attiny84-8.name=ATtiny84 (internal 8 MHz clock)
@@ -163,7 +163,7 @@ attiny84-8.upload.protocol=arduino
 attiny84-8.upload.speed=19200
 attiny84-8.build.mcu=attiny84
 attiny84-8.build.f_cpu=8000000L
-attiny84-8.build.core=attiny45_85
+attiny84-8.build.core=attiny
 attiny84-8.build.variant=tiny14
 
 attiny84-20.name=ATtiny84 (external 20 MHz clock)
@@ -177,7 +177,7 @@ attiny84-20.upload.protocol=arduino
 attiny84-20.upload.speed=19200
 attiny84-20.build.mcu=attiny84
 attiny84-20.build.f_cpu=20000000L
-attiny84-20.build.core=attiny45_85
+attiny84-20.build.core=attiny
 attiny84-20.build.variant=tiny14
 
 attiny13.name=ATtiny13 (internal 9.6 MHz clock)
@@ -190,7 +190,7 @@ attiny13.upload.protocol=arduino
 attiny13.upload.speed=19200
 attiny13.build.mcu=attiny13
 attiny13.build.f_cpu=9600000L
-attiny13.build.core=arduino:arduino
+attiny13.build.core=attiny
 attiny13.build.variant=tiny8
 
 
@@ -201,7 +201,7 @@ attiny2313-i1.bootloader.extended_fuses=0xff
 attiny2313-i1.upload.maximum_size=2048
 attiny2313-i1.build.mcu=attiny2313
 attiny2313-i1.build.f_cpu=1000000L
-attiny2313-i1.build.core=arduino:arduino
+attiny2313-i1.build.core=attiny
 attiny2313-i1.build.variant=tiny20
 
 attiny2313-i8.name=ATtiny2313 (internal 8 MHz clock)
@@ -211,7 +211,7 @@ attiny2313-i8.bootloader.extended_fuses=0xff
 attiny2313-i8.upload.maximum_size=2048
 attiny2313-i8.build.mcu=attiny2313
 attiny2313-i8.build.f_cpu=8000000L
-attiny2313-i8.build.core=arduino:arduino
+attiny2313-i8.build.core=attiny
 attiny2313-i8.build.variant=tiny20
 
 attiny2313-e8.name=ATtiny2313 (external 8 MHz clock)
@@ -221,5 +221,5 @@ attiny2313-e8.bootloader.extended_fuses=0xff
 attiny2313-e8.upload.maximum_size=2048
 attiny2313-e8.build.mcu=attiny2313
 attiny2313-e8.build.f_cpu=8000000L
-attiny2313-e8.build.core=arduino:arduino
+attiny2313-e8.build.core=attiny
 attiny2313-e8.build.variant=tiny20
