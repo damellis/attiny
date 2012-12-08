@@ -34,8 +34,8 @@
 class Print
 {
   private:
-    void printNumber(unsigned long, uint8_t);
-    void printFloat(double, uint8_t);
+	size_t printNumber(unsigned long, uint8_t);
+    size_t printFloat(double, uint8_t);
   public:
     Print() : write_error(0) {}
   
