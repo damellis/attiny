@@ -32,6 +32,8 @@
 
 // ATMEL ATTINY45 / ARDUINO
 //
+// TODO - D4 also has timer output - shouldn't it supprt PWM as well?
+
 //                  +-\/-+
 // Ain0 (D 5) PB5  1|    |8  Vcc
 // Ain3 (D 3) PB3  2|    |7  PB2 (D 2)  Ain1
@@ -91,7 +93,7 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	TIMER0A, /* OC0A */
 	TIMER0B,
 	NOT_ON_TIMER,
-	NOT_ON_TIMER,
+	NOT_ON_TIMER, /* S.B. TIMER1B? - OC1B */
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 };
