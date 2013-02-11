@@ -32,12 +32,36 @@
 
 // ATMEL ATTINY45 / ARDUINO
 //
+// TODO - D4 also has timer output - shouldn't it supprt PWM as well?
+
 //                  +-\/-+
 // Ain0 (D 5) PB5  1|    |8  Vcc
 // Ain3 (D 3) PB3  2|    |7  PB2 (D 2)  Ain1
 // Ain2 (D 4) PB4  3|    |6  PB1 (D 1) pwm1
 //            GND  4|    |5  PB0 (D 0) pwm0
 //                  +----+
+
+// the ATtinyX5 series is a little funny - A0 is the reset pin. Therefore, we will consider the RESET pin to be an I/O pin
+#define NUM_DIGITAL_PINS            6
+#define NUM_ANALOG_INPUTS           4
+
+#define digitalPinHasPWM(p)         ((p) == 0 || (p) == 1)
+
+// the ATtinyX5 series USI Three-wire mode does not have a SS (Slave Select) pin
+const static uint8_t SS   = -1; /* don't know if this works with SPIClass in SPI.cpp */
+const static uint8_t MOSI = 0;
+const static uint8_t MISO = 1;
+const static uint8_t SCK  = 2;
+
+const static uint8_t SDA = 0;
+const static uint8_t SCL = 2;
+const static uint8_t LED_BUILTIN = -1;
+
+const static uint8_t A0 = 5;
+const static uint8_t A1 = 2;
+const static uint8_t A2 = 4;
+const static uint8_t A3 = 3;
+
 
 #define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 4) ? (&GIMSK) : ((uint8_t *)0) )
 #define digitalPinToPCICRbit(p) ( PCIE )
@@ -91,7 +115,7 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	TIMER0A, /* OC0A */
 	TIMER0B,
 	NOT_ON_TIMER,
-	NOT_ON_TIMER,
+	NOT_ON_TIMER, /* S.B. TIMER1B? - OC1B */
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 };

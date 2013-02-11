@@ -1,0 +1,54 @@
+Arduino for ATtiny
+==================
+By Scott Daniels (ProvideYourOwn.com)
+Based on Arduino attiny support by David A. Mellis.
+
+This package adds pinout files for most ATtiny variants as well as some board configurations.
+
+Currently supported chips are:
+
+8 pins: ATtiny13 w/modifications to wiring.c - see below
+8 pins: ATtiny45/85
+14 pins: ATtiny44/84
+20 pins: ATtiny87/167 - untested
+20 pins: ATtiny2313/4313 - untested
+20 pins: ATtiny261/461/861 - untested
+
+
+
+
+Usage
+-----
+cd /path/to/my/sketchbook
+mkdir hardware
+cd hardware
+git clone http://github.com/provideyourown/attiny
+
+(Re)Launch the Arduino IDE. Supported chips will be shown in the "Tools->Board" menu.
+Choose the appropriate configuration.
+Choose the ISP programmer used.
+Upload your sketch.
+
+Customizing
+-----------
+Open in text editor ...sketchbook/hardware/attiny/boards.txt
+Find a board configuration to copy or modify; save file. Relaunch ArduinoIDE
+
+
+Using with ATtiny13 series
+--------------------------
+
+NOTE: A change must be made to the wiring.c file in the arduino core for this to work correctly. 
+The wiring.c file has an error where it does not set the correct TIMER for ATTiny13 only. 
+This change will not impact any other boards.
+
+In arduino/hardware/arduino/cores/arduino/wiring.c:
+
+  Line 44 should be supplemented with an additional condition for ATtiny13
+  #if defined(__AVR_ATtiny24__) || defined(..) ... [Add this] || defined(__AVR_ATtiny13__)
+  SIGNAL(TIM0_0VF_vect)
+
+For more info on using the ATtiny13 series, see:
+  http://tekstop.wordpress.com/2011/12/30/programming-attiny13-using-arduino-isp-and-all-the-hacking-involved/
+ 
+

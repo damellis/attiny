@@ -34,13 +34,30 @@
 //
 //                           +-\/-+
 //                     VCC  1|    |14  GND
-//             (D 10)  PB0  2|    |13  AREF (D  0)
-//             (D  9)  PB1  3|    |12  PA1  (D  1) 
-//                     PB3  4|    |11  PA2  (D  2) 
-//  PWM  INT0  (D  8)  PB2  5|    |10  PA3  (D  3) 
-//  PWM        (D  7)  PA7  6|    |9   PA4  (D  4) 
-//  PWM        (D  6)  PA6  7|    |8   PA5  (D  5)        PWM
+//             (D 10)  PB0  2|    |13  AREF (D  0) (A0/AREF)
+//             (D  9)  PB1  3|    |12  PA1  (D  1) (A1)
+//             RESET   PB3  4|    |11  PA2  (D  2) (A2)
+//  PWM  INT0  (D  8)  PB2  5|    |10  PA3  (D  3) (A3)
+//  PWM    (A7)(D  7)  PA7  6|    |9   PA4  (D  4) (A4)
+//  PWM    (A6)(D  6)  PA6  7|    |8   PA5  (D  5) (A5)  PWM
 //                           +----+
+
+// In like fashion to the Arduino, we don't count the RESET pin (unlike the ATtinyX5 series), but this define can be changed to 12 if the RESET pin is to be used for I/O
+// NOTE: the reset pin is not supported for pcint or Software Serial
+#define NUM_DIGITAL_PINS            11
+#define NUM_ANALOG_INPUTS           8
+
+#define digitalPinHasPWM(p)         ((p) == 5 || (p) == 6 || (p) == 7 || (p) == 8)
+
+// the ATtinyX4 series USI Three-wire mode does not have a SS (Slave Select) pin
+const static uint8_t SS   = -1; /* don't know if this works with SPIClass in SPI.cpp */
+const static uint8_t MOSI = 6;
+const static uint8_t MISO = 5;
+const static uint8_t SCK  = 4;
+
+const static uint8_t SDA = 6;
+const static uint8_t SCL = 4;
+const static uint8_t LED_BUILTIN = -1;
 
 const static uint8_t A0 = 0;
 const static uint8_t A1 = 1;
