@@ -1,26 +1,35 @@
 Arduino for ATtiny
 ==================
-By Sylvain Leroux <sylvain@chicoree.fr>
+By Scott Daniels (ProvideYourOwn.com)
 Based on Arduino attiny support by David A. Mellis.
 
-This set of file add support for (some) ATtiny chip on
-the Arduino platform.
+This package adds pinout files for most ATtiny variants as well as some board configurations.
 
 Currently supported chips are:
-- ATtiny45 (original work by David A. Mellis)
-- ATtiny85 (original work by David A. Mellis)
-- ATtiny44 (original work by David A. Mellis)
-- ATtiny84 (original work by David A. Mellis)
-- ATtiny2313 (by Sylvain Leroux)
+
+8 pins: ATtiny13 w/modifications to wiring.c
+8 pins: ATtiny45/85
+14 pins: ATtiny44/84
+20 pins: ATtiny87/167
+20 pins: ATtiny2313/4313
+20 pins: ATtiny261/461/861
+
+
 
 Usage
 -----
 cd /path/to/my/sketchbook
 mkdir hardware
 cd hardware
-git clone http://github.com/s-leroux/attiny -b Arduino1
+git clone http://github.com/provideyourown/attiny
 
-Next time you launch the Arduino IDE, the supported chip will be added
-to the ''tools > board'' menu. Upload you sketch using the appropriate
-ISP programmer.
+(Re)Launch the Arduino IDE. Support chips will be shown in the "Tools->Board" menu.
+Choose the appropriate configuration.
+Choose the ISP programmer used.
+Upload your sketch.
+
+Customizing
+-----------
+Open in text editor ...sketchbook/hardware/attiny/boards.txt
+Find a board configuration to copy or modify; save file. Relaunch ArduinoIDE
 
