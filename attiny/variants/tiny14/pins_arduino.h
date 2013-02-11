@@ -42,6 +42,22 @@
 //  PWM    (A6)(D  6)  PA6  7|    |8   PA5  (D  5) (A5)  PWM
 //                           +----+
 
+// In like fashion to the Arduino, we don't count the RESET pin (unlike the ATtinyX5 series), but this define can be changed to 12 if the RESET pin is to be used for I/O
+// NOTE: the reset pin is not supported for pcint or Software Serial
+#define NUM_DIGITAL_PINS            11
+#define NUM_ANALOG_INPUTS           8
+
+#define digitalPinHasPWM(p)         ((p) == 2 || (p) == 3 || (p) == 4 || (p) == 5)
+
+// the ATtinyX4 series USI Three-wire mode does not have a SS (Slave Select) pin
+const static uint8_t SS   = -1; /* don't know if this works with SPIClass in SPI.cpp */
+const static uint8_t MOSI = 6;
+const static uint8_t MISO = 5;
+const static uint8_t SCK  = 4;
+
+const static uint8_t SDA = 6;
+const static uint8_t SCL = 4;
+const static uint8_t LED_BUILTIN = -1;
 
 const static uint8_t A0 = 0;
 const static uint8_t A1 = 1;

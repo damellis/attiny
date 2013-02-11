@@ -46,12 +46,21 @@
 //                           +----+
 //
 
-// In like fashion to the Arduino, we don't count the RESET pin (unlike the ATtinyX5 series), but this define can be changed to 12 if the RESET pin is to be used for I/O
-// NOTE: the reset pin is not supported for pcint or Software Serial
 #define NUM_DIGITAL_PINS            15
 #define NUM_ANALOG_INPUTS           10
 
 #define digitalPinHasPWM(p)         ((p) == 2 || (p) == 8 || (p) == 9)
+
+
+const static uint8_t SS   = 6;
+const static uint8_t MOSI = 4;
+const static uint8_t MISO = 2;
+const static uint8_t SCK  = 5;
+
+const static uint8_t SDA = 4;
+const static uint8_t SCL = 5;
+const static uint8_t LED_BUILTIN = -1;
+
 
 const static uint8_t A0 = 0;
 const static uint8_t A1 = 1;

@@ -41,6 +41,28 @@
 //            GND  4|    |5  PB0 (D 0) pwm0
 //                  +----+
 
+// the ATtinyX5 series is a little funny - A0 is the reset pin. Therefore, we will consider the RESET pin to be an I/O pin
+#define NUM_DIGITAL_PINS            6
+#define NUM_ANALOG_INPUTS           4
+
+#define digitalPinHasPWM(p)         ((p) == 0 || (p) == 1)
+
+// the ATtinyX5 series USI Three-wire mode does not have a SS (Slave Select) pin
+const static uint8_t SS   = -1; /* don't know if this works with SPIClass in SPI.cpp */
+const static uint8_t MOSI = 0;
+const static uint8_t MISO = 1;
+const static uint8_t SCK  = 2;
+
+const static uint8_t SDA = 0;
+const static uint8_t SCL = 2;
+const static uint8_t LED_BUILTIN = -1;
+
+const static uint8_t A0 = 5;
+const static uint8_t A1 = 2;
+const static uint8_t A2 = 4;
+const static uint8_t A3 = 3;
+
+
 #define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 4) ? (&GIMSK) : ((uint8_t *)0) )
 #define digitalPinToPCICRbit(p) ( PCIE )
 #define digitalPinToPCMSK(p)    ( ((p) <= 4) ? (&PCMSK) : ((uint8_t *)0) )

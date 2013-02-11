@@ -56,6 +56,16 @@
 
 #define digitalPinHasPWM(p)         ((p) == 7 || (p) == 11 || (p) == 12 || (p) == 13)
 
+// the ATtiny2313 USI Three-wire mode does not have a SS (Slave Select) pin
+const static uint8_t SS   = -1; /* don't know if this works with SPIClass in SPI.cpp */
+const static uint8_t MOSI = 14;
+const static uint8_t MISO = 15;
+const static uint8_t SCK  = 16;
+
+const static uint8_t SDA = 14;
+const static uint8_t SCL = 16;
+const static uint8_t LED_BUILTIN = -1;
+
 
 // there is no PCICR register, but there is a GIMSK equivalent - we'll use that
 #define digitalPinToPCICR(p)    (((p) >= 0 && (p) <= 16) ? (&GIMSK) : ((uint8_t *)0))

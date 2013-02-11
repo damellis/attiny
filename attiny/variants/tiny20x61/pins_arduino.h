@@ -51,7 +51,18 @@
 #define NUM_DIGITAL_PINS            15
 #define NUM_ANALOG_INPUTS           10
 
+
 #define digitalPinHasPWM(p)         ((p) == 9 || (p) == 11)
+
+// the ATtinyX61 series USI Three-wire mode does not have a SS (Slave Select) pin
+static const uint8_t SS   = -1; /* don't know if this works with SPIClass in SPI.cpp */
+static const uint8_t MOSI = 8;
+static const uint8_t MISO = 9;
+static const uint8_t SCK  = 10;
+
+static const uint8_t SDA = 0;
+static const uint8_t SCL = 10;
+static const uint8_t LED_BUILTIN = -1;
 
 const static uint8_t A0 = 0;
 const static uint8_t A1 = 1;
