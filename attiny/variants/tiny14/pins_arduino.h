@@ -47,7 +47,7 @@
 #define NUM_DIGITAL_PINS            11
 #define NUM_ANALOG_INPUTS           8
 
-#define digitalPinHasPWM(p)         ((p) == 2 || (p) == 3 || (p) == 4 || (p) == 5)
+#define digitalPinHasPWM(p)         ((p) == 5 || (p) == 6 || (p) == 7 || (p) == 8)
 
 // the ATtinyX4 series USI Three-wire mode does not have a SS (Slave Select) pin
 const static uint8_t SS   = -1; /* don't know if this works with SPIClass in SPI.cpp */
