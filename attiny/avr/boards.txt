@@ -2,7 +2,7 @@ menu.cpu=Processor
 menu.clock=Clock
 
 attiny.name=ATtiny
-attiny.bootloader.tool=avrdude
+attiny.bootloader.tool=arduino:avrdude
 attiny.bootloader.unlock_bits=0xff
 attiny.bootloader.lock_bits=0xff
 attiny.build.core=arduino:arduino
