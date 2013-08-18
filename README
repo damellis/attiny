@@ -22,7 +22,7 @@ Usage
 cd /path/to/my/sketchbook
 mkdir hardware
 cd hardware
-git clone http://github.com/provideyourown/attiny
+git clone http://github.com/provideyourown/attiny ./
 
 (Re)Launch the Arduino IDE. Supported chips will be shown in the "Tools->Board" menu.
 Choose the appropriate configuration.
@@ -33,6 +33,25 @@ Customizing
 -----------
 Open in text editor ...sketchbook/hardware/attiny/boards.txt
 Find a board configuration to copy or modify; save file. Relaunch ArduinoIDE
+
+IMPORTANT: Change to ArduinoIDE_library/Print.h file:
+--------------------------
+The Print.h file in the Arduino library contains a #define conflict with certain ATtiny chips
+in the AVR library. Open for editing this file:
+
+<ARDUINO_DIR>/hardware/arduino/cores/arduino/Print.h
+
+And change this line from:
+
+#define BIN 2
+
+to:
+
+#define BINARY 2
+
+It may be possible and preferable to copy the Print.h file to the ATtiny hardware directory
+instead of changing the default Arduino one.
+
 
 
 Using with ATtiny13 series
