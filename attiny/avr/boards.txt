@@ -7,6 +7,7 @@ attiny.bootloader.unlock_bits=0xff
 attiny.bootloader.lock_bits=0xff
 attiny.build.core=arduino:arduino
 attiny.build.board=attiny
+attiny.upload.tool=arduino:avrdude
 
 attiny.menu.cpu.attiny45=ATtiny45
 attiny.menu.cpu.attiny45.upload.maximum_size=4096
