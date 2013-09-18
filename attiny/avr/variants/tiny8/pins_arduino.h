@@ -39,10 +39,17 @@
 //            GND  4|    |5  PB0 (D 0) pwm0
 //                  +----+
 
+static const uint8_t A0 = 6;
+static const uint8_t A1 = 7;
+static const uint8_t A2 = 8;
+static const uint8_t A3 = 9;
+
 #define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 4) ? (&GIMSK) : ((uint8_t *)0) )
 #define digitalPinToPCICRbit(p) ( PCIE )
 #define digitalPinToPCMSK(p)    ( ((p) <= 4) ? (&PCMSK) : ((uint8_t *)0) )
 #define digitalPinToPCMSKbit(p) ( (p) )
+
+#define analogPinToChannel(p)   ( (p) < 6 ? (p) : (p) - 6 )
 
 #ifdef ARDUINO_MAIN
 
@@ -74,6 +81,10 @@ const uint8_t PROGMEM digital_pin_to_port_PGM[] = {
 	PB,
 	PB, 
 	PB, // 5
+	PB, // A0
+	PB,
+	PB,
+	PB, // A4
 
 };
 
@@ -84,12 +95,19 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 	_BV(3), /* 3 port B */
 	_BV(4),
 	_BV(5),
-
+	_BV(5),
+	_BV(2),
+	_BV(4),
+	_BV(3),
 };
 
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	TIMER0A, /* OC0A */
 	TIMER0B,
+	NOT_ON_TIMER,
+	NOT_ON_TIMER,
+	NOT_ON_TIMER,
+	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
