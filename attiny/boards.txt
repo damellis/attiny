@@ -19,7 +19,7 @@ attiny45-8.build.core=arduino:arduino
 attiny45-8.build.variant=tiny8
 
 attiny45-16.name=ATtiny45 (internal 16 MHz PLL clock)
-attiny45-16.bootloader.low_fuses=0xe2
+attiny45-16.bootloader.low_fuses=0x71
 attiny45-16.bootloader.high_fuses=0xdf
 attiny45-16.bootloader.extended_fuses=0xff
 attiny45-16.upload.maximum_size=4096
@@ -59,7 +59,7 @@ attiny85-8.build.core=arduino:arduino
 attiny85-8.build.variant=tiny8
 
 attiny85-16.name=ATtiny85 (internal 16 MHz PLL clock)
-attiny85-16.bootloader.low_fuses=0xe2
+attiny85-16.bootloader.low_fuses=0x71
 attiny85-16.bootloader.high_fuses=0xdf
 attiny85-16.bootloader.extended_fuses=0xff
 attiny85-16.upload.maximum_size=8192
