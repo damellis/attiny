@@ -1,3 +1,39 @@
+attiny13-96.name=ATtiny13 (internal 9.6 MHz clock)
+attiny13-96.bootloader.low_fuses=0x7a
+attiny13-96.bootloader.high_fuses=0xff
+attiny13-96.upload.maximum_size=1024
+attiny13-96.build.mcu=attiny13
+attiny13-96.build.f_cpu=9600000L
+attiny13-96.build.core=arduino:arduino
+attiny13-96.build.variant=tiny8
+
+attiny13-48.name=ATtiny13 (internal 4.8 MHz clock)
+attiny13-48.bootloader.low_fuses=0x79
+attiny13-48.bootloader.high_fuses=0xff
+attiny13-48.upload.maximum_size=1024
+attiny13-48.build.mcu=attiny13
+attiny13-48.build.f_cpu=4800000L
+attiny13-48.build.core=arduino:arduino
+attiny13-48.build.variant=tiny8
+
+attiny13-12.name=ATtiny13 (internal 1.2 MHz clock)
+attiny13-12.bootloader.low_fuses=0x6a
+attiny13-12.bootloader.high_fuses=0xff
+attiny13-12.upload.maximum_size=1024
+attiny13-12.build.mcu=attiny13
+attiny13-12.build.f_cpu=1200000L
+attiny13-12.build.core=arduino:arduino
+attiny13-12.build.variant=tiny8
+
+attiny13-128.name=ATtiny13 (internal 128 kHz clock)
+attiny13-128.bootloader.low_fuses=0x7b
+attiny13-128.bootloader.high_fuses=0xff
+attiny13-128.upload.maximum_size=1024
+attiny13-128.build.mcu=attiny13
+attiny13-128.build.f_cpu=128000L
+attiny13-128.build.core=arduino:arduino
+attiny13-128.build.variant=tiny8
+
 attiny45.name=ATtiny45 (internal 1 MHz clock)
 attiny45.bootloader.low_fuses=0x62
 attiny45.bootloader.high_fuses=0xdf
