@@ -35,7 +35,40 @@ void analogReference(uint8_t mode)
 	// can't actually set the register here because the default setting
 	// will connect AVCC and the AREF pin, which would cause a short if
 	// there's something connected to AREF.
-	analog_reference = mode;
+
+	switch (mode)
+	{
+		default:
+		case DEFAULT:
+		{
+			// VCC used as Voltage Reference, disconnected from PB0 (AREF).
+			analog_reference = 0;		//REFS2..0 = X00.
+			break;	
+		}
+		//case INTERNAL:
+		case INTERNAL1V1:
+		{
+			// Internal 1.1V Voltage Reference.
+			analog_reference = 0x80;	//REFS2..0 = 010.
+			break;
+		}
+		case INTERNAL2V56:
+		{
+			// Internal 2.56V Voltage Reference without external bypass 
+			// capacitor, disconnected from PB0 (AREF)(1).
+			// Note: 1. The device requries a supply voltage of 3V in 
+			// order to generate 2.56V reference voltage.
+			analog_reference = 0x90;	//REFS2..0 = 110.
+			break;
+		}
+		case EXTERNAL:
+		{
+			// External Voltage Reference at PB0 (AREF) pin, Internal 
+			// Voltage Reference turned off.
+			analog_reference = 0x40; 	//REFS2..0 = X01.
+			break;
+		}
+	}
 }
 
 int analogRead(uint8_t pin)
@@ -45,9 +78,7 @@ int analogRead(uint8_t pin)
 	// set the analog reference (high two bits of ADMUX) and select the
 	// channel (low 4 bits).  this also sets ADLAR (left-adjust result)
 	// to 0 (the default).
-//	ADMUX = (analog_reference << 6) | (pin & 0x3f); // more MUX
-// sapo per tiny45
-	ADMUX = pin & 0x3f;
+	ADMUX = (analog_reference) | (pin & 0x0f); // more MUX
 
 	// without a delay, we seem to read from the wrong channel
 	//delay(1);
@@ -84,26 +115,36 @@ void analogWrite(uint8_t pin, int val)
 
   //Yep, only 2 PMW, Saposoft
   	
-if (digitalPinToTimer(pin) == TIMER0A) {
-    if (val == 0) {
-	  digitalWrite(pin, LOW);
-    } else {
-	  // connect pwm to pin on timer 0, channel A
-	  sbi(TCCR0A, COM0A1);
-	  // set pwm duty
-	  OCR0A = val;      
-    }
-  } else if (digitalPinToTimer(pin) == TIMER1) {
-    if (val == 0) {
-	  digitalWrite(pin, LOW);
-    } else {
-	  // connect pwm to pin on timer 0, channel B
-	  sbi(TCCR1, COM1A1);
-	  // set pwm duty
-	  OCR1A = val;
-    }
-  }  else if (val < 128)
-    digitalWrite(pin, LOW);
-  else
-    digitalWrite(pin, HIGH);
+	if (digitalPinToTimer(pin) == TIMER0A) 
+	{
+    	if (val == 0) 
+    	{
+	  		digitalWrite(pin, LOW);
+	    } 
+	    else 
+	    {
+	  		// connect pwm to pin on timer 0, channel A
+		  	sbi(TCCR0A, COM0A1);
+	  		// set pwm duty
+	  		OCR0A = val;      
+    	}
+  	} 
+  	else if (digitalPinToTimer(pin) == TIMER1) 
+  	{
+    	if (val == 0) 
+    	{
+	  		digitalWrite(pin, LOW);
+    	} 
+    	else 
+    	{
+			// connect pwm to pin on timer 1, channel A
+	  		sbi(TCCR1, COM1A1);
+	  		// set pwm duty
+	  		OCR1A = val;
+    	}
+  	}  
+  	else if (val < 128)
+    	digitalWrite(pin, LOW);
+  	else
+    	digitalWrite(pin, HIGH);
 }

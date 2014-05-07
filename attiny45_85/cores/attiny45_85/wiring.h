@@ -68,8 +68,10 @@ extern "C"{
 // end interrupts
 	
 #define INTERNAL 3
-#define DEFAULT 1
-#define EXTERNAL 0
+#define INTERNAL1V1 3
+#define INTERNAL2V56 2
+#define DEFAULT 1	
+#define EXTERNAL 0 
 
 // undefine stdlib's abs if encountered
 #ifdef abs
