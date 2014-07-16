@@ -7,6 +7,7 @@ attiny45.build.mcu=attiny45
 attiny45.build.f_cpu=1000000L
 attiny45.build.core=arduino:arduino
 attiny45.build.variant=tiny8
+attiny45.build.board=ATTINY_8
 
 attiny45-8.name=ATtiny45 (internal 8 MHz clock)
 attiny45-8.bootloader.low_fuses=0xe2
@@ -17,6 +18,7 @@ attiny45-8.build.mcu=attiny45
 attiny45-8.build.f_cpu=8000000L
 attiny45-8.build.core=arduino:arduino
 attiny45-8.build.variant=tiny8
+attiny45-8.build.board=ATTINY_8
 
 attiny45-20.name=ATtiny45 (external 20 MHz clock)
 attiny45-20.bootloader.low_fuses=0xfe
@@ -27,6 +29,7 @@ attiny45-20.build.mcu=attiny45
 attiny45-20.build.f_cpu=20000000L
 attiny45-20.build.core=arduino:arduino
 attiny45-20.build.variant=tiny8
+attiny45-20.build.board=ATTINY_8
 
 attiny85.name=ATtiny85 (internal 1 MHz clock)
 attiny85.bootloader.low_fuses=0x62
@@ -37,6 +40,7 @@ attiny85.build.mcu=attiny85
 attiny85.build.f_cpu=1000000L
 attiny85.build.core=arduino:arduino
 attiny85.build.variant=tiny8
+attiny85.build.board=ATTINY_8
 
 attiny85-8.name=ATtiny85 (internal 8 MHz clock)
 attiny85-8.bootloader.low_fuses=0xe2
@@ -47,6 +51,7 @@ attiny85-8.build.mcu=attiny85
 attiny85-8.build.f_cpu=8000000L
 attiny85-8.build.core=arduino:arduino
 attiny85-8.build.variant=tiny8
+attiny85-8.build.board=ATTINY_8
 
 attiny85-20.name=ATtiny85 (external 20 MHz clock)
 attiny85-20.bootloader.low_fuses=0xfe
@@ -57,6 +62,7 @@ attiny85-20.build.mcu=attiny85
 attiny85-20.build.f_cpu=20000000L
 attiny85-20.build.core=arduino:arduino
 attiny85-20.build.variant=tiny8
+attiny85-20.build.board=ATTINY_8
 
 attiny44.name=ATtiny44 (internal 1 MHz clock)
 attiny44.bootloader.low_fuses=0x62
@@ -67,6 +73,7 @@ attiny44.build.mcu=attiny44
 attiny44.build.f_cpu=1000000L
 attiny44.build.core=arduino:arduino
 attiny44.build.variant=tiny14
+attiny44.build.board=ATTINY_14
 
 attiny44-8.name=ATtiny44 (internal 8 MHz clock)
 attiny44-8.bootloader.low_fuses=0xe2
@@ -77,6 +84,7 @@ attiny44-8.build.mcu=attiny44
 attiny44-8.build.f_cpu=8000000L
 attiny44-8.build.core=arduino:arduino
 attiny44-8.build.variant=tiny14
+attiny44-8.build.board=ATTINY_14
 
 attiny44-20.name=ATtiny44 (external 20 MHz clock)
 attiny44-20.bootloader.low_fuses=0xfe
@@ -87,6 +95,7 @@ attiny44-20.build.mcu=attiny44
 attiny44-20.build.f_cpu=20000000L
 attiny44-20.build.core=arduino:arduino
 attiny44-20.build.variant=tiny14
+attiny44-20.build.board=ATTINY_14
 
 attiny84.name=ATtiny84 (internal 1 MHz clock)
 attiny84.bootloader.low_fuses=0x62
@@ -97,6 +106,7 @@ attiny84.build.mcu=attiny84
 attiny84.build.f_cpu=1000000L
 attiny84.build.core=arduino:arduino
 attiny84.build.variant=tiny14
+attiny84.build.board=ATTINY_14
 
 attiny84-8.name=ATtiny84 (internal 8 MHz clock)
 attiny84-8.bootloader.low_fuses=0xe2
@@ -107,6 +117,7 @@ attiny84-8.build.mcu=attiny84
 attiny84-8.build.f_cpu=8000000L
 attiny84-8.build.core=arduino:arduino
 attiny84-8.build.variant=tiny14
+attiny84-8.build.board=ATTINY_14
 
 attiny84-20.name=ATtiny84 (external 20 MHz clock)
 attiny84-20.bootloader.low_fuses=0xfe
@@ -117,3 +128,4 @@ attiny84-20.build.mcu=attiny84
 attiny84-20.build.f_cpu=20000000L
 attiny84-20.build.core=arduino:arduino
 attiny84-20.build.variant=tiny14
+attiny84-20.build.board=ATTINY_14
