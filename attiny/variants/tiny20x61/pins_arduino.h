@@ -2,7 +2,7 @@
   pins_arduino.h - Pin definition functions for Arduino
   Part of Arduino - http://www.arduino.cc/
 
-  Copyright (c) 2007 David A. Mellis
+  Copyright (c) 2012 Scott Daniels - ProvideYourOwn.com
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -21,7 +21,9 @@
 
   $Id: wiring.h 249 2007-02-03 16:52:51Z mellis $
 
-  Pin descr. for ATtiny20x7
+  Pin descr. for ATtiny20x61
+
+  TODO - this file has not been tested
 */
 
 #ifndef Pins_Arduino_h
@@ -29,7 +31,7 @@
 
 #include <avr/pgmspace.h>
 
-// ATMEL ATTINY87/167 / ARDUINO
+// ATMEL ATTINY261/461/861 / ARDUINO
 //
 //                           +-\/-+
 //                   (MOSI/DI/SDA/OC1A/PCINT8)     (D8) PB0  1|    |20  PA0 (D0)(A0)   (ADC0/DI/SDA/PCINT0)

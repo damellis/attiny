@@ -2,7 +2,7 @@
   pins_arduino.h - Pin definition functions for Arduino
   Part of Arduino - http://www.arduino.cc/
 
-  Copyright (c) 2007 David A. Mellis
+  Copyright (c) 2012 Scott Daniels - ProvideYourOwn.com
 
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
@@ -22,6 +22,8 @@
   $Id: wiring.h 249 2007-02-03 16:52:51Z mellis $
 
   Pin descr. for ATtiny20x7
+
+  TODO - this file has not been tested
 */
 
 #ifndef Pins_Arduino_h
