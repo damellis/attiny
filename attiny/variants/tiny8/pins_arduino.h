@@ -44,6 +44,8 @@ static const uint8_t A1 = 7;
 static const uint8_t A2 = 8;
 static const uint8_t A3 = 9;
 
+#define LED_BUILTIN 0
+
 #define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 4) ? (&GIMSK) : ((uint8_t *)0) )
 #define digitalPinToPCICRbit(p) ( PCIE )
 #define digitalPinToPCMSK(p)    ( ((p) <= 4) ? (&PCMSK) : ((uint8_t *)0) )
