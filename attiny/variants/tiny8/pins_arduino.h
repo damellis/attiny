@@ -51,7 +51,14 @@ static const uint8_t A3 = 9;
 
 #define analogPinToChannel(p)   ( (p) < 6 ? (p) : (p) - 6 )
 
+#define TCCR1A GTCCR
+
 #ifdef ARDUINO_MAIN
+
+void initVariant()
+{
+	GTCCR |= (1 << PWM1B);
+}
 
 // these arrays map port names (e.g. port B) to the
 // appropriate addresses for various functions (e.g. reading
@@ -106,7 +113,7 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	TIMER0B,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
-	NOT_ON_TIMER,
+	TIMER1B,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
 	NOT_ON_TIMER,
