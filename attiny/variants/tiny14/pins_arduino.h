@@ -34,13 +34,16 @@
 //
 //                           +-\/-+
 //                     VCC  1|    |14  GND
-//             (D 10)  PB0  2|    |13  AREF (D  0)
-//             (D  9)  PB1  3|    |12  PA1  (D  1) 
-//                     PB3  4|    |11  PA2  (D  2) 
-//  PWM  INT0  (D  8)  PB2  5|    |10  PA3  (D  3) 
-//  PWM        (D  7)  PA7  6|    |9   PA4  (D  4) 
-//  PWM        (D  6)  PA6  7|    |8   PA5  (D  5)        PWM
+//             (D  0)  PB0  2|    |13  AREF (D 10)
+//             (D  1)  PB1  3|    |12  PA1  (D  9) 
+//                     PB3  4|    |11  PA2  (D  8) 
+//  PWM  INT0  (D  2)  PB2  5|    |10  PA3  (D  7) 
+//  PWM        (D  3)  PA7  6|    |9   PA4  (D  6) 
+//  PWM        (D  4)  PA6  7|    |8   PA5  (D  5)        PWM
 //                           +----+
+
+#define PORT_A_ID 1
+#define PORT_B_ID 2
 
 const static uint8_t A0 = 0;
 const static uint8_t A1 = 1;
@@ -84,30 +87,30 @@ const uint16_t PROGMEM port_to_input_PGM[] =
 
 const uint8_t PROGMEM digital_pin_to_port_PGM[] = 
 {
-  PA, /* 0 */
-  PA,
-  PA,
-  PA,
-  PA,
-  PA,
-  PA,
-  PA,
-  PB, /* 8 */
-  PB,
-  PB,
+  PORT_B_ID, /* 0 */
+  PORT_B_ID,
+  PORT_B_ID,
+  PORT_A_ID,
+  PORT_A_ID,
+  PORT_A_ID,
+  PORT_A_ID,
+  PORT_A_ID,
+  PORT_A_ID, /* 8 */
+  PORT_A_ID,
+  PORT_A_ID,
 };
 
 const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = 
 {
-  _BV(0), /* port A */
+  _BV(0), /* 0, port B */
   _BV(1),
   _BV(2),
-  _BV(3),
-  _BV(4),
-  _BV(5), 
+  _BV(7), /* 3 port B */
   _BV(6),
-  _BV(7),
-  _BV(2), /* port B */
+  _BV(5),
+  _BV(4),
+  _BV(3),
+  _BV(2), 
   _BV(1),
   _BV(0),
 };
@@ -116,13 +119,14 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] =
 {
   NOT_ON_TIMER,
   NOT_ON_TIMER,
+  TIMER0A, /* OC0A */
+  TIMER0B, /* OC0B */
+  TIMER1A, /* OC1A */
+  TIMER1B, /* OC1B */
+  NOT_ON_TIMER,
   NOT_ON_TIMER,
   NOT_ON_TIMER, 
   NOT_ON_TIMER,
-  TIMER1B, /* OC1B */
-  TIMER1A, /* OC1A */
-  TIMER0B, /* OC0B */
-  TIMER0A, /* OC0A */
   NOT_ON_TIMER,
   NOT_ON_TIMER,
 };
