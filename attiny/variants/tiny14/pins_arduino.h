@@ -54,6 +54,7 @@ const static uint8_t A7 = 7;
 #define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 10) ? (&GIMSK) : ((uint8_t *)0) )
 #define digitalPinToPCICRbit(p) ( ((p) <= 7) ? PCIE0 : PCIE1 )
 #define digitalPinToPCMSK(p)    ( ((p) <= 7) ? (&PCMSK0) : (((p) <= 10) ? (&PCMSK1) : ((uint8_t *)0)) )
+#define digitalPinToInterrupt(p)  ( (p) == 2 ? 0 : ((p) == 3 ? 1 : -1) ) 
 #define digitalPinToPCMSKbit(p) ( ((p) <= 7) ? (p) : (10 - (p)) )
 
 #ifdef ARDUINO_MAIN
