@@ -48,6 +48,16 @@ attiny85-8.build.f_cpu=8000000L
 attiny85-8.build.core=arduino:arduino
 attiny85-8.build.variant=tiny8
 
+attiny85-8.name=ATtiny85 (internal 16 MHz internal PPL clock)
+attiny85-8.bootloader.low_fuses=0xf1
+attiny85-8.bootloader.high_fuses=0xdd
+attiny85-8.bootloader.extended_fuses=0xfe
+attiny85-8.upload.maximum_size=8192
+attiny85-8.build.mcu=attiny85
+attiny85-8.build.f_cpu=16000000L
+attiny85-8.build.core=arduino:arduino
+attiny85-8.build.variant=tiny8
+
 attiny85-20.name=ATtiny85 (external 20 MHz clock)
 attiny85-20.bootloader.low_fuses=0xfe
 attiny85-20.bootloader.high_fuses=0xdf
