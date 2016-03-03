@@ -11,21 +11,25 @@ attiny.upload.tool=arduino:avrdude
 
 attiny.menu.cpu.attiny45=ATtiny45
 attiny.menu.cpu.attiny45.upload.maximum_size=4096
+attiny.menu.cpu.attiny45.upload.maximum_data_size=256
 attiny.menu.cpu.attiny45.build.mcu=attiny45
 attiny.menu.cpu.attiny45.build.variant=tiny8
 
 attiny.menu.cpu.attiny85=ATtiny85
 attiny.menu.cpu.attiny85.upload.maximum_size=8192
+attiny.menu.cpu.attiny85.upload.maximum_data_size=256
 attiny.menu.cpu.attiny85.build.mcu=attiny85
 attiny.menu.cpu.attiny85.build.variant=tiny8
 
 attiny.menu.cpu.attiny44=ATtiny44
 attiny.menu.cpu.attiny44.upload.maximum_size=4096
+attiny.menu.cpu.attiny44.upload.maximum_data_size=256
 attiny.menu.cpu.attiny44.build.mcu=attiny44
 attiny.menu.cpu.attiny44.build.variant=tiny14
 
 attiny.menu.cpu.attiny84=ATtiny84
 attiny.menu.cpu.attiny84.upload.maximum_size=8192
+attiny.menu.cpu.attiny84.upload.maximum_data_size=512
 attiny.menu.cpu.attiny84.build.mcu=attiny84
 attiny.menu.cpu.attiny84.build.variant=tiny14
 
