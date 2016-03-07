@@ -22,7 +22,7 @@ attiny.menu.cpu.attiny45.build.variant=tiny8
 
 attiny.menu.cpu.attiny85=ATtiny85
 attiny.menu.cpu.attiny85.upload.maximum_size=8192
-attiny.menu.cpu.attiny85.upload.maximum_data_size=256
+attiny.menu.cpu.attiny85.upload.maximum_data_size=512
 attiny.menu.cpu.attiny85.build.mcu=attiny85
 attiny.menu.cpu.attiny85.build.variant=tiny8
 
