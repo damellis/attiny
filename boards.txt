@@ -11,6 +11,7 @@ attiny.upload.tool=arduino:avrdude
 
 attiny.menu.cpu.attiny25=ATtiny25
 attiny.menu.cpu.attiny25.upload.maximum_size=2048
+attiny.menu.cpu.attiny25.upload.maximum_data_size=128
 attiny.menu.cpu.attiny25.build.mcu=attiny25
 attiny.menu.cpu.attiny25.build.variant=tiny8
 
@@ -28,6 +29,7 @@ attiny.menu.cpu.attiny85.build.variant=tiny8
 
 attiny.menu.cpu.attiny24=ATtiny24
 attiny.menu.cpu.attiny24.upload.maximum_size=2048
+attiny.menu.cpu.attiny24.upload.maximum_data_size=128
 attiny.menu.cpu.attiny24.build.mcu=attiny24
 attiny.menu.cpu.attiny24.build.variant=tiny14
 
