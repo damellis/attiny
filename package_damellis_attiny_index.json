@@ -79,8 +79,10 @@
           "help": {
             "online": "https://github.com/sonyhome/attiny"
           },
-          "url": "https://github.com/sonyhome/attiny/archive/master.zip",
-          "archiveFileName": "master.zip",
+          "url": "https://raw.githubusercontent.com/sonyhome/attiny/master/AtTiny.zip",
+          "archiveFileName": "AtTiny.zip",
+          "checksum": "SHA-256:dc023ca8962b42c5be0691c817b82e90bcc1004340003bd44bee42acae4657ba",
+          "size": "5767",
           "boards": [
             {"name": "ATtiny25"},
             {"name": "ATtiny45"},
