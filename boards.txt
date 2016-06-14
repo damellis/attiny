@@ -1,6 +1,9 @@
-menu.cpu=Processor
-menu.clock=Clock
+menu=Processor
 
+################################################################################
+## Support for AVR AtTiny CPUs.
+## See http://www.engbedded.com/fusecalc for fuse value calculations
+################################################################################
 attiny.name=ATtiny
 attiny.bootloader.tool=arduino:avrdude
 attiny.bootloader.unlock_bits=0xff
@@ -9,68 +12,285 @@ attiny.build.core=arduino:arduino
 attiny.build.board=attiny
 attiny.upload.tool=arduino:avrdude
 
-attiny.menu.cpu.attiny25=ATtiny25
-attiny.menu.cpu.attiny25.upload.maximum_size=2048
-attiny.menu.cpu.attiny25.upload.maximum_data_size=128
-attiny.menu.cpu.attiny25.build.mcu=attiny25
-attiny.menu.cpu.attiny25.build.variant=tiny8
 
-attiny.menu.cpu.attiny45=ATtiny45
-attiny.menu.cpu.attiny45.upload.maximum_size=4096
-attiny.menu.cpu.attiny45.upload.maximum_data_size=256
-attiny.menu.cpu.attiny45.build.mcu=attiny45
-attiny.menu.cpu.attiny45.build.variant=tiny8
 
-attiny.menu.cpu.attiny85=ATtiny85
-attiny.menu.cpu.attiny85.upload.maximum_size=8192
-attiny.menu.cpu.attiny85.upload.maximum_data_size=512
-attiny.menu.cpu.attiny85.build.mcu=attiny85
-attiny.menu.cpu.attiny85.build.variant=tiny8
 
-attiny.menu.cpu.attiny24=ATtiny24
-attiny.menu.cpu.attiny24.upload.maximum_size=2048
-attiny.menu.cpu.attiny24.upload.maximum_data_size=128
-attiny.menu.cpu.attiny24.build.mcu=attiny24
-attiny.menu.cpu.attiny24.build.variant=tiny14
+################################################################################
+## AtTiny85 (8KB/512B)
+################################################################################
+attiny.menu.attiny85=ATtiny85
+attiny.menu.attiny85.upload.maximum_size=8192
+attiny.menu.attiny85.upload.maximum_data_size=512
+attiny.menu.attiny85.build.mcu=attiny85
+attiny.menu.attiny85.build.variant=tiny8
+################################################################################
+# F1= CkSel=--1, Sut=11, 16MHz PLL, start 16ck/14ck + 64ms)
+# DD= Brownout detection 2.8V
+# FE= Allow self programming
+attiny.menu.attiny85.clock.internal16=16 MHz (internal)
+attiny.menu.attiny85.clock.internal16.bootloader.low_fuses=0xf1
+attiny.menu.attiny85.clock.internal16.bootloader.high_fuses=0xdd
+attiny.menu.attiny85.clock.internal16.bootloader.extended_fuses=0xfe
+attiny.menu.attiny85.clock.internal16.build.f_cpu=8000000L
+################################################################################
+attiny.menu.attiny85.clock.internal8=8 MHz (internal)
+attiny.menu.attiny85.clock.internal8.bootloader.low_fuses=0xe2
+attiny.menu.attiny85.clock.internal8.bootloader.high_fuses=0xdd
+attiny.menu.attiny85.clock.internal8.bootloader.extended_fuses=0xfe
+attiny.menu.attiny85.clock.internal8.build.f_cpu=8000000L
+################################################################################
+attiny.menu.attiny85.clock.internal1=1 MHz (internal, default)
+attiny.menu.attiny85.clock.internal1.bootloader.low_fuses=0x62
+attiny.menu.attiny85.clock.internal1.bootloader.high_fuses=0xdd
+attiny.menu.attiny85.clock.internal1.bootloader.extended_fuses=0xfe
+attiny.menu.attiny85.clock.internal1.build.f_cpu=1000000L
+################################################################################
 
-attiny.menu.cpu.attiny44=ATtiny44
-attiny.menu.cpu.attiny44.upload.maximum_size=4096
-attiny.menu.cpu.attiny44.upload.maximum_data_size=256
-attiny.menu.cpu.attiny44.build.mcu=attiny44
-attiny.menu.cpu.attiny44.build.variant=tiny14
+################################################################################
+attiny.menu.attiny85.clock.external20=20 MHz (external)
+attiny.menu.attiny85.clock.external20.bootloader.low_fuses=0xfe
+attiny.menu.attiny85.clock.external20.bootloader.high_fuses=0xdf
+attiny.menu.attiny85.clock.external20.bootloader.extended_fuses=0xfe
+attiny.menu.attiny85.clock.external20.build.f_cpu=20000000L
+################################################################################
+attiny.menu.attiny85.clock.external16=16 MHz (external)
+attiny.menu.attiny85.clock.external16.bootloader.low_fuses=0xfe
+attiny.menu.attiny85.clock.external16.bootloader.high_fuses=0xdf
+attiny.menu.attiny85.clock.external16.bootloader.extended_fuses=0xfe
+attiny.menu.attiny85.clock.external16.build.f_cpu=16000000L
+################################################################################
+attiny.menu.attiny85.clock.external8=8 MHz (external)
+attiny.menu.attiny85.clock.external8.bootloader.low_fuses=0xfe
+attiny.menu.attiny85.clock.external8.bootloader.high_fuses=0xdf
+attiny.menu.attiny85.clock.external8.bootloader.extended_fuses=0xfe
+attiny.menu.attiny85.clock.external8.build.f_cpu=8000000L
 
-attiny.menu.cpu.attiny84=ATtiny84
-attiny.menu.cpu.attiny84.upload.maximum_size=8192
-attiny.menu.cpu.attiny84.upload.maximum_data_size=512
-attiny.menu.cpu.attiny84.build.mcu=attiny84
-attiny.menu.cpu.attiny84.build.variant=tiny14
 
-attiny.menu.clock.internal1=1 MHz (internal)
-attiny.menu.clock.internal1.bootloader.low_fuses=0x62
-attiny.menu.clock.internal1.bootloader.high_fuses=0xdf
-attiny.menu.clock.internal1.bootloader.extended_fuses=0xff
-attiny.menu.clock.internal1.build.f_cpu=1000000L
 
-attiny.menu.clock.internal8=8 MHz (internal)
-attiny.menu.clock.internal8.bootloader.low_fuses=0xe2
-attiny.menu.clock.internal8.bootloader.high_fuses=0xdf
-attiny.menu.clock.internal8.bootloader.extended_fuses=0xff
-attiny.menu.clock.internal8.build.f_cpu=8000000L
 
-attiny.menu.clock.external8=8 MHz (external)
-attiny.menu.clock.external8.bootloader.low_fuses=0xfe
-attiny.menu.clock.external8.bootloader.high_fuses=0xdf
-attiny.menu.clock.external8.bootloader.extended_fuses=0xff
-attiny.menu.clock.external8.build.f_cpu=8000000L
+################################################################################
+## AtTiny45 (4KB/256B)
+################################################################################
+attiny.menu.attiny45=ATtiny45
+attiny.menu.attiny45.upload.maximum_size=4096
+attiny.menu.attiny45.upload.maximum_data_size=256
+attiny.menu.attiny45.build.mcu=attiny45
+attiny.menu.attiny45.build.variant=tiny8
+################################################################################
+# 16 MHz (internal)
+################################################################################
+attiny.menu.attiny45.clock.internal8=8 MHz (internal)
+attiny.menu.attiny45.clock.internal8.bootloader.low_fuses=0xe2
+attiny.menu.attiny45.clock.internal8.bootloader.high_fuses=0xdf
+attiny.menu.attiny45.clock.internal8.bootloader.extended_fuses=0xff
+attiny.menu.attiny45.clock.internal8.build.f_cpu=8000000L
+################################################################################
+attiny.menu.attiny45.clock.internal1=1 MHz (internal)
+attiny.menu.attiny45.clock.internal1.bootloader.low_fuses=0x62
+attiny.menu.attiny45.clock.internal1.bootloader.high_fuses=0xdf
+attiny.menu.attiny45.clock.internal1.bootloader.extended_fuses=0xff
+attiny.menu.attiny45.clock.internal1.build.f_cpu=1000000L
+################################################################################
 
-attiny.menu.clock.external16=16 MHz (external)
-attiny.menu.clock.external16.bootloader.low_fuses=0xfe
-attiny.menu.clock.external16.bootloader.high_fuses=0xdf
-attiny.menu.clock.external16.bootloader.extended_fuses=0xff
-attiny.menu.clock.external16.build.f_cpu=16000000L
+################################################################################
+attiny.menu.attiny45.clock.external20=20 MHz (external)
+attiny.menu.attiny45.clock.external20.bootloader.low_fuses=0xfe
+attiny.menu.attiny45.clock.external20.bootloader.high_fuses=0xdf
+attiny.menu.attiny45.clock.external20.bootloader.extended_fuses=0xff
+attiny.menu.attiny45.clock.external20.build.f_cpu=20000000L
+################################################################################
+attiny.menu.attiny45.clock.external16=16 MHz (external)
+attiny.menu.attiny45.clock.external16.bootloader.low_fuses=0xfe
+attiny.menu.attiny45.clock.external16.bootloader.high_fuses=0xdf
+attiny.menu.attiny45.clock.external16.bootloader.extended_fuses=0xff
+attiny.menu.attiny45.clock.external16.build.f_cpu=16000000L
+################################################################################
+attiny.menu.attiny45.clock.external8=8 MHz (external)
+attiny.menu.attiny45.clock.external8.bootloader.low_fuses=0xfe
+attiny.menu.attiny45.clock.external8.bootloader.high_fuses=0xdf
+attiny.menu.attiny45.clock.external8.bootloader.extended_fuses=0xff
+attiny.menu.attiny45.clock.external8.build.f_cpu=8000000L
 
-attiny.menu.clock.external20=20 MHz (external)
-attiny.menu.clock.external20.bootloader.low_fuses=0xfe
-attiny.menu.clock.external20.bootloader.high_fuses=0xdf
-attiny.menu.clock.external20.bootloader.extended_fuses=0xff
-attiny.menu.clock.external20.build.f_cpu=20000000L
+
+
+
+################################################################################
+## AtTiny25 (2KB/128B)
+################################################################################
+attiny.menu.attiny25=ATtiny25
+attiny.menu.attiny25.upload.maximum_size=2048
+attiny.menu.attiny25.upload.maximum_data_size=128
+attiny.menu.attiny25.build.mcu=attiny25
+attiny.menu.attiny25.build.variant=tiny8
+################################################################################
+# 16 MHz (internal)
+################################################################################
+attiny.menu.attiny25.clock.internal8=8 MHz (internal)
+attiny.menu.attiny25.clock.internal8.bootloader.low_fuses=0xe2
+attiny.menu.attiny25.clock.internal8.bootloader.high_fuses=0xdf
+attiny.menu.attiny25.clock.internal8.bootloader.extended_fuses=0xff
+attiny.menu.attiny25.clock.internal8.build.f_cpu=8000000L
+################################################################################
+attiny.menu.attiny25.clock.internal1=1 MHz (internal)
+attiny.menu.attiny25.clock.internal1.bootloader.low_fuses=0x62
+attiny.menu.attiny25.clock.internal1.bootloader.high_fuses=0xdf
+attiny.menu.attiny25.clock.internal1.bootloader.extended_fuses=0xff
+attiny.menu.attiny25.clock.internal1.build.f_cpu=1000000L
+################################################################################
+
+################################################################################
+attiny.menu.attiny25.clock.external20=20 MHz (external)
+attiny.menu.attiny25.clock.external20.bootloader.low_fuses=0xfe
+attiny.menu.attiny25.clock.external20.bootloader.high_fuses=0xdf
+attiny.menu.attiny25.clock.external20.bootloader.extended_fuses=0xff
+attiny.menu.attiny25.clock.external20.build.f_cpu=20000000L
+################################################################################
+attiny.menu.attiny25.clock.external16=16 MHz (external)
+attiny.menu.attiny25.clock.external16.bootloader.low_fuses=0xfe
+attiny.menu.attiny25.clock.external16.bootloader.high_fuses=0xdf
+attiny.menu.attiny25.clock.external16.bootloader.extended_fuses=0xff
+attiny.menu.attiny25.clock.external16.build.f_cpu=16000000L
+################################################################################
+attiny.menu.attiny25.clock.external8=8 MHz (external)
+attiny.menu.attiny25.clock.external8.bootloader.low_fuses=0xfe
+attiny.menu.attiny25.clock.external8.bootloader.high_fuses=0xdf
+attiny.menu.attiny25.clock.external8.bootloader.extended_fuses=0xff
+attiny.menu.attiny25.clock.external8.build.f_cpu=8000000L
+
+
+
+
+################################################################################
+## AtTiny84 (8KB/512B)
+################################################################################
+attiny.menu.attiny84=ATtiny84
+attiny.menu.attiny84.upload.maximum_size=8192
+attiny.menu.attiny84.upload.maximum_data_size=512
+attiny.menu.attiny84.build.mcu=attiny84
+attiny.menu.attiny84.build.variant=tiny14
+################################################################################
+# 16 MHz (internal)
+################################################################################
+attiny.menu.attiny84.clock.internal8=8 MHz (internal)
+attiny.menu.attiny84.clock.internal8.bootloader.low_fuses=0xe2
+attiny.menu.attiny84.clock.internal8.bootloader.high_fuses=0xdf
+attiny.menu.attiny84.clock.internal8.bootloader.extended_fuses=0xff
+attiny.menu.attiny84.clock.internal8.build.f_cpu=8000000L
+################################################################################
+attiny.menu.attiny84.clock.internal1=1 MHz (internal)
+attiny.menu.attiny84.clock.internal1.bootloader.low_fuses=0x62
+attiny.menu.attiny84.clock.internal1.bootloader.high_fuses=0xdf
+attiny.menu.attiny84.clock.internal1.bootloader.extended_fuses=0xff
+attiny.menu.attiny84.clock.internal1.build.f_cpu=1000000L
+################################################################################
+
+################################################################################
+attiny.menu.attiny84.clock.external20=20 MHz (external)
+attiny.menu.attiny84.clock.external20.bootloader.low_fuses=0xfe
+attiny.menu.attiny84.clock.external20.bootloader.high_fuses=0xdf
+attiny.menu.attiny84.clock.external20.bootloader.extended_fuses=0xff
+attiny.menu.attiny84.clock.external20.build.f_cpu=20000000L
+################################################################################
+attiny.menu.attiny84.clock.external16=16 MHz (external)
+attiny.menu.attiny84.clock.external16.bootloader.low_fuses=0xfe
+attiny.menu.attiny84.clock.external16.bootloader.high_fuses=0xdf
+attiny.menu.attiny84.clock.external16.bootloader.extended_fuses=0xff
+attiny.menu.attiny84.clock.external16.build.f_cpu=16000000L
+################################################################################
+attiny.menu.attiny84.clock.external8=8 MHz (external)
+attiny.menu.attiny84.clock.external8.bootloader.low_fuses=0xfe
+attiny.menu.attiny84.clock.external8.bootloader.high_fuses=0xdf
+attiny.menu.attiny84.clock.external8.bootloader.extended_fuses=0xff
+attiny.menu.attiny84.clock.external8.build.f_cpu=8000000L
+
+
+
+
+################################################################################
+## AtTiny44 (4KB/256B)
+################################################################################
+attiny.menu.attiny44=ATtiny44
+attiny.menu.attiny44.upload.maximum_size=4096
+attiny.menu.attiny44.upload.maximum_data_size=256
+attiny.menu.attiny44.build.mcu=attiny44
+attiny.menu.attiny44.build.variant=tiny14
+################################################################################
+# 16 MHz (internal)
+################################################################################
+attiny.menu.attiny44.clock.internal8=8 MHz (internal)
+attiny.menu.attiny44.clock.internal8.bootloader.low_fuses=0xe2
+attiny.menu.attiny44.clock.internal8.bootloader.high_fuses=0xdf
+attiny.menu.attiny44.clock.internal8.bootloader.extended_fuses=0xff
+attiny.menu.attiny44.clock.internal8.build.f_cpu=8000000L
+################################################################################
+attiny.menu.attiny44.clock.internal1=1 MHz (internal)
+attiny.menu.attiny44.clock.internal1.bootloader.low_fuses=0x62
+attiny.menu.attiny44.clock.internal1.bootloader.high_fuses=0xdf
+attiny.menu.attiny44.clock.internal1.bootloader.extended_fuses=0xff
+attiny.menu.attiny44.clock.internal1.build.f_cpu=1000000L
+################################################################################
+
+################################################################################
+attiny.menu.attiny44.clock.external20=20 MHz (external)
+attiny.menu.attiny44.clock.external20.bootloader.low_fuses=0xfe
+attiny.menu.attiny44.clock.external20.bootloader.high_fuses=0xdf
+attiny.menu.attiny44.clock.external20.bootloader.extended_fuses=0xff
+attiny.menu.attiny44.clock.external20.build.f_cpu=20000000L
+################################################################################
+attiny.menu.attiny44.clock.external16=16 MHz (external)
+attiny.menu.attiny44.clock.external16.bootloader.low_fuses=0xfe
+attiny.menu.attiny44.clock.external16.bootloader.high_fuses=0xdf
+attiny.menu.attiny44.clock.external16.bootloader.extended_fuses=0xff
+attiny.menu.attiny44.clock.external16.build.f_cpu=16000000L
+################################################################################
+attiny.menu.attiny44.clock.external8=8 MHz (external)
+attiny.menu.attiny44.clock.external8.bootloader.low_fuses=0xfe
+attiny.menu.attiny44.clock.external8.bootloader.high_fuses=0xdf
+attiny.menu.attiny44.clock.external8.bootloader.extended_fuses=0xff
+attiny.menu.attiny44.clock.external8.build.f_cpu=8000000L
+
+
+
+
+################################################################################
+## AtTiny24 (2KB/128B)
+################################################################################
+attiny.menu.attiny24=ATtiny24
+attiny.menu.attiny24.upload.maximum_size=2048
+attiny.menu.attiny24.upload.maximum_data_size=128
+attiny.menu.attiny24.build.mcu=attiny24
+attiny.menu.attiny24.build.variant=tiny14
+################################################################################
+# 16 MHz (internal)
+################################################################################
+attiny.menu.attiny24.clock.internal8=8 MHz (internal)
+attiny.menu.attiny24.clock.internal8.bootloader.low_fuses=0xe2
+attiny.menu.attiny24.clock.internal8.bootloader.high_fuses=0xdf
+attiny.menu.attiny24.clock.internal8.bootloader.extended_fuses=0xff
+attiny.menu.attiny24.clock.internal8.build.f_cpu=8000000L
+################################################################################
+attiny.menu.attiny24.clock.internal1=1 MHz (internal)
+attiny.menu.attiny24.clock.internal1.bootloader.low_fuses=0x62
+attiny.menu.attiny24.clock.internal1.bootloader.high_fuses=0xdf
+attiny.menu.attiny24.clock.internal1.bootloader.extended_fuses=0xff
+attiny.menu.attiny24.clock.internal1.build.f_cpu=1000000L
+################################################################################
+
+################################################################################
+attiny.menu.attiny24.clock.external20=20 MHz (external)
+attiny.menu.attiny24.clock.external20.bootloader.low_fuses=0xfe
+attiny.menu.attiny24.clock.external20.bootloader.high_fuses=0xdf
+attiny.menu.attiny24.clock.external20.bootloader.extended_fuses=0xff
+attiny.menu.attiny24.clock.external20.build.f_cpu=20000000L
+################################################################################
+attiny.menu.attiny24.clock.external16=16 MHz (external)
+attiny.menu.attiny24.clock.external16.bootloader.low_fuses=0xfe
+attiny.menu.attiny24.clock.external16.bootloader.high_fuses=0xdf
+attiny.menu.attiny24.clock.external16.bootloader.extended_fuses=0xff
+attiny.menu.attiny24.clock.external16.build.f_cpu=16000000L
+################################################################################
+attiny.menu.attiny24.clock.external8=8 MHz (external)
+attiny.menu.attiny24.clock.external8.bootloader.low_fuses=0xfe
+attiny.menu.attiny24.clock.external8.bootloader.high_fuses=0xdf
+attiny.menu.attiny24.clock.external8.bootloader.extended_fuses=0xff
+attiny.menu.attiny24.clock.external8.build.f_cpu=8000000L
