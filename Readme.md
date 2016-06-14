@@ -11,7 +11,7 @@ IDE there's a new source for board configurations:
 
 Menu: File -> Preferences -> Settings -> Additional Boards Manager URLs:
 
-https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json
+https://raw.githubusercontent.com/sonyhome/attiny/master/package_damellis_attiny_index.json
 
 Now go to the boards manager to fetch and install AtTiny support.
 

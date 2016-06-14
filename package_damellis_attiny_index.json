@@ -71,6 +71,39 @@
             }
           ]
         }
+        {
+          "name": "attiny",
+          "architecture": "avr",
+          "version": "1.0.2",
+          "category": "attiny",
+          "help": {
+            "online": "https://github.com/sonyhome/attiny"
+          },
+          "url": "https://github.com/sonyhome/attiny/archive/master.zip",
+          "archiveFileName": "master.zip",
+          "checksum": "",
+          "size": "",
+          "boards": [
+            {"name": "ATtiny25"},
+            {"name": "ATtiny45"},
+            {"name": "ATtiny85"},
+            {"name": "ATtiny24"},
+            {"name": "ATtiny44"},
+            {"name": "ATtiny84"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "4.8.1-arduino5"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.0.1-arduino5"
+            }
+          ]
+        }
       ],
       "tools": []
     }
