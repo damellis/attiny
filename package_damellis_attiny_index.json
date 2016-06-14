@@ -81,8 +81,6 @@
           },
           "url": "https://github.com/sonyhome/attiny/archive/master.zip",
           "archiveFileName": "master.zip",
-          "checksum": "",
-          "size": "",
           "boards": [
             {"name": "ATtiny25"},
             {"name": "ATtiny45"},
