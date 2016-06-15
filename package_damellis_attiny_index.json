@@ -81,14 +81,14 @@
           },
           "url": "https://raw.githubusercontent.com/sonyhome/attiny/master/AtTiny.zip",
           "archiveFileName": "AtTiny.zip",
-          "size": "6201",
+          "size": "5689",
           "boards": [
-            {"name": "ATtiny25"},
-            {"name": "ATtiny45"},
             {"name": "ATtiny85"},
-            {"name": "ATtiny24"},
+            {"name": "ATtiny45"},
+            {"name": "ATtiny25"},
+            {"name": "ATtiny84"},
             {"name": "ATtiny44"},
-            {"name": "ATtiny84"}
+            {"name": "ATtiny24"}
           ],
           "toolsDependencies": [
             {
