@@ -1,14 +1,16 @@
 ATtiny
 =======
 
-This repo contains a set of "cores" which adds support for ATtiny family of microcontroller to the Arduino IDE.
+This repo contains a set of "cores" which adds support for some members of the Atmel AVR ATtiny family of microcontroller to the Arduino IDE.
 
-The following micro controllers are supported
+The following micro controllers are supported:
 
+- ATtiny 25 (8 pin)
 - ATtiny 45 (8 pin)
 - ATtiny 85 (8 pin)
-- ATtiny 44 (16 pin)
-- ATtiny 84 (16 pin)
+- ATtiny 24 (14 pin)
+- ATtiny 44 (14 pin)
+- ATtiny 84 (14 pin)
 
 Installation and usage
 ----------------------
@@ -22,6 +24,6 @@ http://www.youtube.com/watch?v=30rPt802n1k
 Which branch to use?
 --------------------
 
-If you are using Arduino 1.0.x IDE the just use the master branch.
+If you are using Arduino 1.6.x IDE the just use the master branch.
 
-If you are using Arduino 1.5.x IDE or building from Arduino source, then use the ide-1.5.x branch.
+If you are using Arduino 1.0.x IDE, then use the ide-1.0.x branch.
