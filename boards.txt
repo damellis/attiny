@@ -41,6 +41,12 @@ ATtinyX5.menu.clock.internal8.bootloader.high_fuses=0xdf
 ATtinyX5.menu.clock.internal8.bootloader.extended_fuses=0xff
 ATtinyX5.menu.clock.internal8.build.f_cpu=8000000L
 
+ATtinyX5.menu.clock.internal16=Internal 16 MHz
+ATtinyX5.menu.clock.internal16.bootloader.low_fuses=0xf1
+ATtinyX5.menu.clock.internal16.bootloader.high_fuses=0xdf
+ATtinyX5.menu.clock.internal16.bootloader.extended_fuses=0xff
+ATtinyX5.menu.clock.internal16.build.f_cpu=16000000L
+
 ATtinyX5.menu.clock.external8=External 8 MHz
 ATtinyX5.menu.clock.external8.bootloader.low_fuses=0xfe
 ATtinyX5.menu.clock.external8.bootloader.high_fuses=0xdf
