@@ -70,6 +70,39 @@
               "version": "6.0.1-arduino5"
             }
           ]
+        },
+        {
+          "name": "attiny",
+          "architecture": "avr",
+          "version": "1.0.2",
+          "category": "attiny",
+          "help": {
+            "online": ""
+          },
+          "url": "https://github.com/damellis/attiny/archive/6bba7d452af59d5190025bc870ec9e53d170e4d9.zip",
+          "archiveFileName": "6bba7d452af59d5190025bc870ec9e53d170e4d9.zip",
+          "checksum": "SHA-256:1654a8968fea7d599255bd18430786f9c84340606e7a678b9cf9a3cd49d94ad7",
+          "size": "5913",
+          "boards": [
+            {"name": "ATtiny25"},
+            {"name": "ATtiny45"},
+            {"name": "ATtiny85"},
+            {"name": "ATtiny24"},
+            {"name": "ATtiny44"},
+            {"name": "ATtiny84"}
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "4.8.1-arduino5"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.0.1-arduino5"
+            }
+          ]
         }
       ],
       "tools": []
