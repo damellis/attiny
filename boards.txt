@@ -29,31 +29,31 @@ ATtinyX5.menu.cpu.attiny85.upload.maximum_data_size=512
 ATtinyX5.menu.cpu.attiny85.build.mcu=attiny85
 ATtinyX5.menu.cpu.attiny85.build.variant=tiny8
 
-ATtinyX5.menu.clock.internal1=1 MHz (internal)
+ATtinyX5.menu.clock.internal1=Internal 1 MHz
 ATtinyX5.menu.clock.internal1.bootloader.low_fuses=0x62
 ATtinyX5.menu.clock.internal1.bootloader.high_fuses=0xdf
 ATtinyX5.menu.clock.internal1.bootloader.extended_fuses=0xff
 ATtinyX5.menu.clock.internal1.build.f_cpu=1000000L
 
-ATtinyX5.menu.clock.internal8=8 MHz (internal)
+ATtinyX5.menu.clock.internal8=Internal 8 MHz
 ATtinyX5.menu.clock.internal8.bootloader.low_fuses=0xe2
 ATtinyX5.menu.clock.internal8.bootloader.high_fuses=0xdf
 ATtinyX5.menu.clock.internal8.bootloader.extended_fuses=0xff
 ATtinyX5.menu.clock.internal8.build.f_cpu=8000000L
 
-ATtinyX5.menu.clock.external8=8 MHz (external)
+ATtinyX5.menu.clock.external8=External 8 MHz
 ATtinyX5.menu.clock.external8.bootloader.low_fuses=0xfe
 ATtinyX5.menu.clock.external8.bootloader.high_fuses=0xdf
 ATtinyX5.menu.clock.external8.bootloader.extended_fuses=0xff
 ATtinyX5.menu.clock.external8.build.f_cpu=8000000L
 
-ATtinyX5.menu.clock.external16=16 MHz (external)
+ATtinyX5.menu.clock.external16=External 16 MHz
 ATtinyX5.menu.clock.external16.bootloader.low_fuses=0xfe
 ATtinyX5.menu.clock.external16.bootloader.high_fuses=0xdf
 ATtinyX5.menu.clock.external16.bootloader.extended_fuses=0xff
 ATtinyX5.menu.clock.external16.build.f_cpu=16000000L
 
-ATtinyX5.menu.clock.external20=20 MHz (external)
+ATtinyX5.menu.clock.external20=External 20 MHz
 ATtinyX5.menu.clock.external20.bootloader.low_fuses=0xfe
 ATtinyX5.menu.clock.external20.bootloader.high_fuses=0xdf
 ATtinyX5.menu.clock.external20.bootloader.extended_fuses=0xff
@@ -87,31 +87,31 @@ ATtinyX4.menu.cpu.attiny84.upload.maximum_data_size=512
 ATtinyX4.menu.cpu.attiny84.build.mcu=attiny84
 ATtinyX4.menu.cpu.attiny84.build.variant=tiny14
 
-ATtinyX4.menu.clock.internal1=1 MHz (internal)
+ATtinyX4.menu.clock.internal1=Internal 1 MHz
 ATtinyX4.menu.clock.internal1.bootloader.low_fuses=0x62
 ATtinyX4.menu.clock.internal1.bootloader.high_fuses=0xdf
 ATtinyX4.menu.clock.internal1.bootloader.extended_fuses=0xff
 ATtinyX4.menu.clock.internal1.build.f_cpu=1000000L
 
-ATtinyX4.menu.clock.internal8=8 MHz (internal)
+ATtinyX4.menu.clock.internal8=Internal 8 MHz
 ATtinyX4.menu.clock.internal8.bootloader.low_fuses=0xe2
 ATtinyX4.menu.clock.internal8.bootloader.high_fuses=0xdf
 ATtinyX4.menu.clock.internal8.bootloader.extended_fuses=0xff
 ATtinyX4.menu.clock.internal8.build.f_cpu=8000000L
 
-ATtinyX4.menu.clock.external8=8 MHz (external)
+ATtinyX4.menu.clock.external8=External 8 MHz
 ATtinyX4.menu.clock.external8.bootloader.low_fuses=0xfe
 ATtinyX4.menu.clock.external8.bootloader.high_fuses=0xdf
 ATtinyX4.menu.clock.external8.bootloader.extended_fuses=0xff
 ATtinyX4.menu.clock.external8.build.f_cpu=8000000L
 
-ATtinyX4.menu.clock.external16=16 MHz (external)
+ATtinyX4.menu.clock.external16=External 16 MHz
 ATtinyX4.menu.clock.external16.bootloader.low_fuses=0xfe
 ATtinyX4.menu.clock.external16.bootloader.high_fuses=0xdf
 ATtinyX4.menu.clock.external16.bootloader.extended_fuses=0xff
 ATtinyX4.menu.clock.external16.build.f_cpu=16000000L
 
-ATtinyX4.menu.clock.external20=20 MHz (external)
+ATtinyX4.menu.clock.external20=External 20 MHz
 ATtinyX4.menu.clock.external20.bootloader.low_fuses=0xfe
 ATtinyX4.menu.clock.external20.bootloader.high_fuses=0xdf
 ATtinyX4.menu.clock.external20.bootloader.extended_fuses=0xff
