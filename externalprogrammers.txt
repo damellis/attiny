@@ -1,0 +1,24 @@
+
+################################
+## These programmers will only
+## appear if you're using the
+## ArduinoEclipse/Sloeber IDE.
+## Download this great software
+## at: http://eclipse.baeyens.it
+################################
+
+#As far as jantje knows only the ArduinoISP makes sence for the attiny
+
+arduinoisp.name=ArduinoISP
+arduinoisp.protocol=arduinoisp
+arduinoisp.program.tool=avrdude
+arduinoisp.program.extra_params=
+
+arduinoasisp.name=Arduino as ISP
+arduinoasisp.communication=serial
+arduinoasisp.protocol=stk500v1
+arduinoasisp.speed=19200
+arduinoasisp.program.protocol=stk500v1
+arduinoasisp.program.speed=19200
+arduinoasisp.program.tool=avrdude
+arduinoasisp.program.extra_params=-P{serial.port} -b{program.speed}
