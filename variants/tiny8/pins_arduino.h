@@ -23,6 +23,7 @@
 
   Modified 28-08-2009 for attiny84 R.Wiersma
   Modified 09-10-2009 for attiny45 A.Saporetti
+  Modified 04-09-2017 for attiny85 A.Neimar
 */
 
 #ifndef Pins_Arduino_h
@@ -39,10 +40,37 @@
 //            GND  4|    |5  PB0 (D 0) pwm0
 //                  +----+
 
-static const uint8_t A0 = 6;
-static const uint8_t A1 = 7;
-static const uint8_t A2 = 8;
-static const uint8_t A3 = 9;
+#define NUM_DIGITAL_PINS            6
+#define NUM_ANALOG_INPUTS           4
+// #define analogInputToDigitalPin(p)  ((p > 1) && (p < 6) ? (p) + 2 : -1)
+
+#define digitalPinHasPWM(p)         ((p) == 0 || (p) == 1);// || (p) == 3 || (p) == 4)
+
+#define PIN_SPI_SS    (3)
+#define PIN_SPI_MOSI  (0)
+#define PIN_SPI_MISO  (1)
+#define PIN_SPI_SCK   (2)
+
+static const uint8_t SS   = PIN_SPI_SS;
+static const uint8_t MOSI = PIN_SPI_MOSI;
+static const uint8_t MISO = PIN_SPI_MISO;
+static const uint8_t SCK  = PIN_SPI_SCK;
+
+#define PIN_WIRE_SDA        (0)
+#define PIN_WIRE_SCL        (2)
+
+static const uint8_t SDA = PIN_WIRE_SDA;
+static const uint8_t SCL = PIN_WIRE_SCL;
+
+#define PIN_A0   (5)
+#define PIN_A1   (2)
+#define PIN_A2   (4)
+#define PIN_A3   (3)
+
+static const uint8_t A0 = PIN_A0;
+static const uint8_t A1 = PIN_A1;
+static const uint8_t A2 = PIN_A2;
+static const uint8_t A3 = PIN_A3;
 
 #define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 4) ? (&GIMSK) : ((uint8_t *)0) )
 #define digitalPinToPCICRbit(p) ( PCIE )
