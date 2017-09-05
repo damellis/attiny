@@ -23,7 +23,7 @@
 
   Modified 28-08-2009 for attiny84 R.Wiersma
   Modified 09-10-2009 for attiny45 A.Saporetti
-  Modified 04-09-2009 for attiny85 A.Neimar
+  Modified 04-09-2017 for attiny85 A.Neimar
 */
 
 #ifndef Pins_Arduino_h
@@ -44,7 +44,7 @@
 #define NUM_ANALOG_INPUTS           4
 // #define analogInputToDigitalPin(p)  ((p > 1) && (p < 6) ? (p) + 2 : -1)
 
-#define digitalPinHasPWM(p)         ((p) == 0 || (p) == 1 || (p) == 3 || (p) == 4)
+#define digitalPinHasPWM(p)         ((p) == 0 || (p) == 1);// || (p) == 3 || (p) == 4)
 
 #define PIN_SPI_SS    (3)
 #define PIN_SPI_MOSI  (0)
