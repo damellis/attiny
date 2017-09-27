@@ -34,21 +34,15 @@
 // ATMEL ATTINY45 / ARDUINO
 //
 //                  +-\/-+
-// Ain0 (D 5) PB5  1|    |8  Vcc
-// Ain3 (D 3) PB3  2|    |7  PB2 (D 2)  Ain1
-// Ain2 (D 4) PB4  3|    |6  PB1 (D 1) pwm1
-//            GND  4|    |5  PB0 (D 0) pwm0
+// ADC0 (D 5) PB5  1|    |8  Vcc
+// ADC3 (D 3) PB3  2|    |7  PB2 (D 2) ADC1
+// ADc2 (D 4) PB4  3|    |6  PB1 (D 1) AIN1, pwm1
+//            GND  4|    |5  PB0 (D 0) AIN0, pwm0
 //                  +----+
+
 
 #define NUM_DIGITAL_PINS            6
 #define NUM_ANALOG_INPUTS           4
-
-#define analogInputToDigitalPin(p) (((p) == 2 ? 1 :   \
-                                    ((p) == 3 ? 3 :   \
-                                    ((p) == 4 ? 2 :   \
-                                    ((p) == 5 ? 0 : NOT_AN_INTERRUPT)))))
-
-#define digitalPinHasPWM(p)         ((p) == 0 || (p) == 1 || (p) == 3 || (p) == 4)
 
 #define PIN_SPI_SS    (3)
 #define PIN_SPI_MOSI  (0)
@@ -72,6 +66,7 @@ static const uint8_t TX  = PIN_SERIAL_TX;
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
+// Referentes a ADCx
 #define PIN_A0   (5)
 #define PIN_A1   (2)
 #define PIN_A2   (4)
@@ -82,12 +77,35 @@ static const uint8_t A1 = PIN_A1;
 static const uint8_t A2 = PIN_A2;
 static const uint8_t A3 = PIN_A3;
 
+// Referentes a PBx, pino digital
+
+#define PIN_PB0   (0)
+#define PIN_PB1   (1)
+#define PIN_PB2   (2)
+#define PIN_PB3   (3)
+#define PIN_PB4   (4)
+#define PIN_PB5   (5)
+
+static const uint8_t D0 = PIN_PB0;
+static const uint8_t D1 = PIN_PB1;
+static const uint8_t D2 = PIN_PB2;
+static const uint8_t D3 = PIN_PB3;
+static const uint8_t D4 = PIN_PB4;
+static const uint8_t D5 = PIN_PB5;
+
+#define analogInputToDigitalPin(p) (((p) == A1 ? D1 :   \
+                                    ((p) == A3 ? D3 :   \
+                                    ((p) == A2 ? D2 :   \
+                                    ((p) == A0 ? D0 : NOT_AN_INTERRUPT)))))
+
+#define digitalPinHasPWM(p)         ((p) == D0 || (p) == D1 || (p) == D3 || (p) == D4)
+
 #define digitalPinToPCICR(p)    ( ((p) >= 0 && (p) <= 4) ? (&GIMSK) : ((uint8_t *)0) )
 #define digitalPinToPCICRbit(p) ( PCIE )
 #define digitalPinToPCMSK(p)    ( ((p) <= 4) ? (&PCMSK) : ((uint8_t *)0) )
 #define digitalPinToPCMSKbit(p) ( (p) )
 
-#define digitalPinToInterrupt(p)  ((p) == 2 ? 0 : NOT_AN_INTERRUPT)
+#define digitalPinToInterrupt(p)  ((p) == D2 ? 0 : NOT_AN_INTERRUPT)
 
 #define analogPinToChannel(P)   ( pgm_read_byte( analog_pin_to_channel_PGM + (P) ) )
 
@@ -162,10 +180,10 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 };
 
 const uint8_t PROGMEM analog_pin_to_channel_PGM[4] = {
-    5,      // A0               ADC0
-    2,      // A1               ADC1
-    4,      // A2               ADC2
-    3       // A3               ADC3
+    A0,      // ADC0
+    A1,      // ADC1
+    A2,      // ADC2
+    A3       // ADC3
 };
 
 #endif
