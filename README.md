@@ -19,7 +19,7 @@ Following the [installation guide](http://hlt.media.mit.edu/?p=1695) to install 
 
 Also check out this video from Make which explains how to setup and use this core.
 
-http://www.youtube.com/watch?v=30rPt802n1k
+[How-To: Shrinkify Your Arduino Projects](http://www.youtube.com/watch?v=30rPt802n1k)
 
 Which branch to use?
 --------------------
