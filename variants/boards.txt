@@ -1,0 +1,124 @@
+menu.cpu=Processor
+menu.clock=Clock
+
+################################################################################
+
+ATtinyX5.name=ATtiny25/45/85
+ATtinyX5.bootloader.tool=arduino:avrdude
+ATtinyX5.bootloader.unlock_bits=0xff
+ATtinyX5.bootloader.lock_bits=0xff
+ATtinyX5.build.core=arduino:arduino
+ATtinyX5.build.board=attiny
+ATtinyX5.upload.tool=arduino:avrdude
+
+ATtinyX5.menu.cpu.attiny25=ATtiny25
+ATtinyX5.menu.cpu.attiny25.upload.maximum_size=2048
+ATtinyX5.menu.cpu.attiny25.upload.maximum_data_size=128
+ATtinyX5.menu.cpu.attiny25.build.mcu=attiny25
+ATtinyX5.menu.cpu.attiny25.build.variant=tiny8
+
+ATtinyX5.menu.cpu.attiny45=ATtiny45
+ATtinyX5.menu.cpu.attiny45.upload.maximum_size=4096
+ATtinyX5.menu.cpu.attiny45.upload.maximum_data_size=256
+ATtinyX5.menu.cpu.attiny45.build.mcu=attiny45
+ATtinyX5.menu.cpu.attiny45.build.variant=tiny8
+
+ATtinyX5.menu.cpu.attiny85=ATtiny85
+ATtinyX5.menu.cpu.attiny85.upload.maximum_size=8192
+ATtinyX5.menu.cpu.attiny85.upload.maximum_data_size=512
+ATtinyX5.menu.cpu.attiny85.build.mcu=attiny85
+ATtinyX5.menu.cpu.attiny85.build.variant=tiny8
+
+ATtinyX5.menu.clock.internal1=Internal 1 MHz
+ATtinyX5.menu.clock.internal1.bootloader.low_fuses=0x62
+ATtinyX5.menu.clock.internal1.bootloader.high_fuses=0xdf
+ATtinyX5.menu.clock.internal1.bootloader.extended_fuses=0xff
+ATtinyX5.menu.clock.internal1.build.f_cpu=1000000L
+
+ATtinyX5.menu.clock.internal8=Internal 8 MHz
+ATtinyX5.menu.clock.internal8.bootloader.low_fuses=0xe2
+ATtinyX5.menu.clock.internal8.bootloader.high_fuses=0xdf
+ATtinyX5.menu.clock.internal8.bootloader.extended_fuses=0xff
+ATtinyX5.menu.clock.internal8.build.f_cpu=8000000L
+
+ATtinyX5.menu.clock.internal16=Internal 16 MHz
+ATtinyX5.menu.clock.internal16.bootloader.low_fuses=0xf1
+ATtinyX5.menu.clock.internal16.bootloader.high_fuses=0xdf
+ATtinyX5.menu.clock.internal16.bootloader.extended_fuses=0xff
+ATtinyX5.menu.clock.internal16.build.f_cpu=16000000L
+
+ATtinyX5.menu.clock.external8=External 8 MHz
+ATtinyX5.menu.clock.external8.bootloader.low_fuses=0xfe
+ATtinyX5.menu.clock.external8.bootloader.high_fuses=0xdf
+ATtinyX5.menu.clock.external8.bootloader.extended_fuses=0xff
+ATtinyX5.menu.clock.external8.build.f_cpu=8000000L
+
+ATtinyX5.menu.clock.external16=External 16 MHz
+ATtinyX5.menu.clock.external16.bootloader.low_fuses=0xfe
+ATtinyX5.menu.clock.external16.bootloader.high_fuses=0xdf
+ATtinyX5.menu.clock.external16.bootloader.extended_fuses=0xff
+ATtinyX5.menu.clock.external16.build.f_cpu=16000000L
+
+ATtinyX5.menu.clock.external20=External 20 MHz
+ATtinyX5.menu.clock.external20.bootloader.low_fuses=0xfe
+ATtinyX5.menu.clock.external20.bootloader.high_fuses=0xdf
+ATtinyX5.menu.clock.external20.bootloader.extended_fuses=0xff
+ATtinyX5.menu.clock.external20.build.f_cpu=20000000L
+
+################################################################################
+
+ATtinyX4.name=ATtiny24/44/84
+ATtinyX4.bootloader.tool=arduino:avrdude
+ATtinyX4.bootloader.unlock_bits=0xff
+ATtinyX4.bootloader.lock_bits=0xff
+ATtinyX4.build.core=arduino:arduino
+ATtinyX4.build.board=attiny
+ATtinyX4.upload.tool=arduino:avrdude
+
+ATtinyX4.menu.cpu.attiny24=ATtiny24
+ATtinyX4.menu.cpu.attiny24.upload.maximum_size=2048
+ATtinyX4.menu.cpu.attiny24.upload.maximum_data_size=128
+ATtinyX4.menu.cpu.attiny24.build.mcu=attiny24
+ATtinyX4.menu.cpu.attiny24.build.variant=tiny14
+
+ATtinyX4.menu.cpu.attiny44=ATtiny44
+ATtinyX4.menu.cpu.attiny44.upload.maximum_size=4096
+ATtinyX4.menu.cpu.attiny44.upload.maximum_data_size=256
+ATtinyX4.menu.cpu.attiny44.build.mcu=attiny44
+ATtinyX4.menu.cpu.attiny44.build.variant=tiny14
+
+ATtinyX4.menu.cpu.attiny84=ATtiny84
+ATtinyX4.menu.cpu.attiny84.upload.maximum_size=8192
+ATtinyX4.menu.cpu.attiny84.upload.maximum_data_size=512
+ATtinyX4.menu.cpu.attiny84.build.mcu=attiny84
+ATtinyX4.menu.cpu.attiny84.build.variant=tiny14
+
+ATtinyX4.menu.clock.internal1=Internal 1 MHz
+ATtinyX4.menu.clock.internal1.bootloader.low_fuses=0x62
+ATtinyX4.menu.clock.internal1.bootloader.high_fuses=0xdf
+ATtinyX4.menu.clock.internal1.bootloader.extended_fuses=0xff
+ATtinyX4.menu.clock.internal1.build.f_cpu=1000000L
+
+ATtinyX4.menu.clock.internal8=Internal 8 MHz
+ATtinyX4.menu.clock.internal8.bootloader.low_fuses=0xe2
+ATtinyX4.menu.clock.internal8.bootloader.high_fuses=0xdf
+ATtinyX4.menu.clock.internal8.bootloader.extended_fuses=0xff
+ATtinyX4.menu.clock.internal8.build.f_cpu=8000000L
+
+ATtinyX4.menu.clock.external8=External 8 MHz
+ATtinyX4.menu.clock.external8.bootloader.low_fuses=0xfe
+ATtinyX4.menu.clock.external8.bootloader.high_fuses=0xdf
+ATtinyX4.menu.clock.external8.bootloader.extended_fuses=0xff
+ATtinyX4.menu.clock.external8.build.f_cpu=8000000L
+
+ATtinyX4.menu.clock.external16=External 16 MHz
+ATtinyX4.menu.clock.external16.bootloader.low_fuses=0xfe
+ATtinyX4.menu.clock.external16.bootloader.high_fuses=0xdf
+ATtinyX4.menu.clock.external16.bootloader.extended_fuses=0xff
+ATtinyX4.menu.clock.external16.build.f_cpu=16000000L
+
+ATtinyX4.menu.clock.external20=External 20 MHz
+ATtinyX4.menu.clock.external20.bootloader.low_fuses=0xfe
+ATtinyX4.menu.clock.external20.bootloader.high_fuses=0xdf
+ATtinyX4.menu.clock.external20.bootloader.extended_fuses=0xff
+ATtinyX4.menu.clock.external20.build.f_cpu=20000000L
