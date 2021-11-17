@@ -15,7 +15,7 @@ The following micro controllers are supported:
 Installation and usage
 ----------------------
 
-Following the [installation guide](http://hlt.media.mit.edu/?p=1695) to install the core files and follow [this guide](http://hlt.media.mit.edu/?p=1706) to find out how to build the circuit.
+Following the [installation guide](http://highlowtech.org/?p=1695) to install the core files and follow [this guide](http://highlowtech.org/?p=1706) to find out how to build the circuit.
 
 Also check out this video from Make which explains how to setup and use this core.
 
